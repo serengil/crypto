@@ -1,9 +1,5 @@
 # crypto
-Elliptic Curve public key generator. It implements the following approaches.
-1- Double and add method (a.k.a. binary method)
-2- Elliptic curve point addition
-3- Elliptic curve point doubling
-4- Extended euclidean algorithm to find multiplicative inverse rapidly
+Elliptic Curve public key generator. It implements the following approaches; Double and add method (a.k.a. binary method), Elliptic curve point addition, Elliptic curve point doubling, Extended euclidean algorithm to find multiplicative inverse rapidly.
 
 If you set the dump parameter true in the applyExtendedEuclidean and multiplyScalarPoint methods, you could monitor how the algorithm works. 
 
