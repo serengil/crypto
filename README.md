@@ -19,7 +19,7 @@ Run the GeneratePublicKey.java
 License
 =======
 
-Copyright 2016 Sefi Ilkin Serengil
+Copyright 2016 Sefik Ilkin Serengil
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
