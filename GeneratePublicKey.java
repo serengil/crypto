@@ -117,6 +117,11 @@ public class GeneratePublicKey {
 	
 	public static BigDecimal generatePrimeModulo(){
 		
+		//Secp256k1
+		//Recommended 256-bit Elliptic Curve Domain Parameters over Fp (http://www.secg.org/sec2-v2.pdf)
+		//2^256 - 2^32 - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 2^0
+		
+		
 		BigDecimal base = new BigDecimal(2);
 		
 		BigDecimal modulus =  base.pow(256)
@@ -128,6 +133,17 @@ public class GeneratePublicKey {
 		.subtract(base.pow(4))
 		.subtract(base.pow(0));
 		
+		//----------------------------------
+		/*
+		//alternative: P-256 prime
+		// 2^256 - 2^224 + 2^192 + 2^96 - 1 
+		
+		BigDecimal modulus =  base.pow(256)
+		.subtract(base.pow(224))
+		.add(base.pow(192))
+		.add(base.pow(96))
+		.subtract(base.pow(0));
+		*/
 		return modulus;
 		
 	}
