@@ -10,15 +10,16 @@ import com.crypto.entity.FFPoint;
 
 public class EccOverFiniteField {
 	
-	public static BigInteger mod; // = new BigInteger("23"); // F23
+	public static BigInteger mod;
 	
 	public static void main(String[] args) throws Exception {
 		
 		//inital elliptic curve configuration (public)
 		
 		mod = generatePrimeModulo();
+		//mod = new BigInteger("23"); // F23
 		
-		//curve equation: y^2 = x^3 + ax + b ->  y^2 = x^3 + x + 1
+		//curve equation: y^2 = x^3 + ax + b -> current curve: y^2 = x^3 + x + 1
 		BigInteger a = new BigInteger("1");
 		BigInteger b = new BigInteger("1");
 		
