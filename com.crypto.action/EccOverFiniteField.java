@@ -124,7 +124,10 @@ public class EccOverFiniteField {
 		
 		while(x3.compareTo(BigInteger.valueOf(0)) < 0) {
 			
-			x3 = x3.add(mod);
+			BigInteger times = x3.abs().divide(mod).add(BigInteger.valueOf(1));
+			
+			//x3 = x3.add(mod);
+			x3 = x3.add(times.multiply(mod));
 			
 		}
 		
@@ -132,6 +135,7 @@ public class EccOverFiniteField {
 			
 			BigInteger times = y3.abs().divide(mod).add(BigInteger.valueOf(1));
 			
+			//y3 = y3.add(mode);
 			y3 = y3.add(times.multiply(mod));
 			
 		}
