@@ -9,7 +9,7 @@ The code could be applied for key exchanging (aka Elliptic Curve Diffie Hellman)
 Usage
 =====
 
-Run the GeneratePublicKey.java
+Run files under the com.crypto.action
 
 =======
 License
