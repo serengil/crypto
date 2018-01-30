@@ -181,74 +181,49 @@ public class EccOverFiniteField {
 	
 	public static BigInteger multiplicativeInverse(BigInteger a, BigInteger mod) throws Exception {
 		
-		return a.modInverse(mod);
+		//return a.modInverse(mod); //out-of-the-box function
 		
-		/*
-		//extended euclidean algorithm
+		//extended euclidean algorithm to find modular inverse
 		
-		boolean dump = false; 
-		
-		while(a.compareTo(new BigInteger("0")) == -1)
+		while(a.compareTo(new BigInteger("0")) == -1){
+			
 			a = a.add(mod);
-		
-		BigInteger x1 = new BigInteger("1"); 
-		BigInteger x2 = new BigInteger("0");
-		BigInteger x3 = new BigInteger("1").multiply(mod);
-		
-		BigInteger y1 = new BigInteger("0");
-		BigInteger y2 = new BigInteger("1");
-		BigInteger y3 = new BigInteger("1").multiply(a);  
-		
-		if(dump)
-			System.out.println("Q\tx1\tx2\tx3\ty1\ty2\ty3\tt1\tt2\tt3");
-		
-		BigInteger i = new BigInteger("1");
-		BigInteger q = new BigInteger("0");
-		
-		BigInteger t1 = new BigInteger("0");
-		BigInteger t2 = new BigInteger("0");
-		BigInteger t3 = new BigInteger("0");		
-		
-		while(y3.compareTo(new BigInteger("1")) != 0){
-			
-			if(i.compareTo(new BigInteger("1")) == 0){
-				
-				q = x3.divide(y3);
-				t1 = x1.subtract(q.multiply(y1));
-				t2 = x2.subtract(q.multiply(y2));
-				t3 = x3.subtract(q.multiply(y3));
-				
-			}
-			else{
-				
-				x1 = y1.multiply(new BigInteger("1"));
-				x2 = y2.multiply(new BigInteger("1"));
-				x3 = y3.multiply(new BigInteger("1"));
-				
-				y1 = t1.multiply(new BigInteger("1"));
-				y2 = t2.multiply(new BigInteger("1"));
-				y3 = t3.multiply(new BigInteger("1"));
-				
-				if(y3.compareTo(new BigInteger("0")) == 0)
-					throw new Exception("no multiplicative inverse for 1/"+a+" mod "+mod);				
-				
-				q = x3.divide(y3);
-				
-				t1 = x1.subtract(q.multiply(y1));
-				t2 = x2.subtract(q.multiply(y2));
-				t3 = x3.subtract(q.multiply(y3));
-				
-			}
-			
-			i = i.add(new BigInteger("1"));
-			
-			if(dump)
-				System.out.println(q+"\t"+x1+"\t"+x2+"\t"+x3+"\t"+y1+"\t"+y2+"\t"+y3+"\t"+t1+"\t"+t2+"\t"+t3);
 			
 		}
 		
-		return y2;
-		*/
+		BigInteger x1 = new BigInteger("1");
+		BigInteger x2 = new BigInteger("0");
+		BigInteger x3 = mod;
+		
+		BigInteger y1 = new BigInteger("0");;
+		BigInteger y2 = new BigInteger("1");;
+		BigInteger y3 = a;
+		
+		BigInteger q = x3.divide(y3);
+		
+		BigInteger t1 = x1.subtract(q.multiply(y1));
+		BigInteger t2 = x2.subtract(q.multiply(y2));
+		BigInteger t3 = x3.subtract(q.multiply(y3));
+		
+		while(y3.compareTo(new BigInteger("1")) != 0){
+			
+			x1 = y1;
+			x2 = y2;
+			x3 = y3;
+			
+			y1 = t1;
+			y2 = t2;
+			y3 = t3;
+			
+			q = x3.divide(y3);
+			
+			t1 = x1.subtract(q.multiply(y1));
+			t2 = x2.subtract(q.multiply(y2));
+			t3 = x3.subtract(q.multiply(y3));
+			
+		}
+		
+		return y2;	
 		
 	}
 	
