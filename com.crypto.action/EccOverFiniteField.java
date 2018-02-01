@@ -15,9 +15,11 @@ public class EccOverFiniteField  {
 		
 		//inital elliptic curve configuration (public)
 		
-		//mod = generatePrimeModulo();
-		BigInteger mod = new BigInteger("199"); // F199
-		BigInteger order = new BigInteger("211"); //point of the finite field - order of group
+		//BigInteger mod = new BigInteger("199"); // F199
+		//BigInteger order = new BigInteger("211"); //point of the finite field - order of group
+		
+		BigInteger mod = generatePrimeModulo();
+		BigInteger order = new BigInteger("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16); 
 		
 		//curve equation: y^2 = x^3 + ax + b -> current curve: y^2 = x^3 + 7
 		BigInteger a = new BigInteger("0");
@@ -25,8 +27,10 @@ public class EccOverFiniteField  {
 		
 		//base point on the curve
 		Point basePoint = new Point();
-		basePoint.setPointX(BigInteger.valueOf(2));
-		basePoint.setPointY(BigInteger.valueOf(24));
+		//basePoint.setPointX(BigInteger.valueOf(2));
+		//basePoint.setPointY(BigInteger.valueOf(24));
+		basePoint.setPointX(new BigInteger("55066263022277343669578718895168534326250603453777594175500187360389116729240"));
+		basePoint.setPointY(new BigInteger("32670510020758816978083085130507043184471273380659243275938904335757337482424"));
 		
 		//-----------------------------------------------
 		/*
@@ -113,14 +117,16 @@ public class EccOverFiniteField  {
 		
 		//------------------------------------
 		
-		BigInteger privateKey = new BigInteger("151");
+		//BigInteger privateKey = new BigInteger("151");
+		BigInteger privateKey = new BigInteger("75263518707598184987916378021939673586055614731957507592904438851787542395619");
 		
 		Point publicKey = applyDoubleAndAddMethod(basePoint, privateKey, a, b, mod);
 		
 		System.out.println("public key: "+displayPoint(publicKey));
 		
 		
-		BigInteger randomKey = new BigInteger("115");
+		//BigInteger randomKey = new BigInteger("115");
+		BigInteger randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
 		
 		Point randomPoint = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
 		
