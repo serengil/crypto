@@ -4,69 +4,73 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import java.security.MessageDigest;
 import java.util.Date;
 
-import com.crypto.entity.FFPoint;
+import com.crypto.entity.Point;
 
-public class EccOverFiniteField {
-	
-	public static BigInteger mod;
+public class EccOverFiniteField  {
 	
 	public static void main(String[] args) throws Exception {
 		
 		//inital elliptic curve configuration (public)
 		
-		mod = generatePrimeModulo();
-		//mod = new BigInteger("23"); // F23
+		//mod = generatePrimeModulo();
+		BigInteger mod = new BigInteger("199"); // F199
+		BigInteger order = new BigInteger("211"); //point of the finite field - order of group
 		
-		//curve equation: y^2 = x^3 + ax + b -> current curve: y^2 = x^3 + x + 1
-		BigInteger a = new BigInteger("1");
-		BigInteger b = new BigInteger("1");
+		//curve equation: y^2 = x^3 + ax + b -> current curve: y^2 = x^3 + 7
+		BigInteger a = new BigInteger("0");
+		BigInteger b = new BigInteger("7");
 		
 		//base point on the curve
-		FFPoint P = new FFPoint();
-		P.setPointX(BigInteger.valueOf(3));
-		P.setPointY(BigInteger.valueOf(10));
+		Point basePoint = new Point();
+		basePoint.setPointX(BigInteger.valueOf(2));
+		basePoint.setPointY(BigInteger.valueOf(24));
 		
 		//-----------------------------------------------
 		/*
-		System.out.println("P: "+displayPoint(P));
+		System.out.println("P: "+displayPoint(basePoint));
 		
 		//brute force
 		
-		Point newPoint = pointAddition(P, P, a, b);
+		Point newPoint = pointAddition(basePoint, basePoint, a, b, mod);
 		System.out.println("2P: "+displayPoint(newPoint));
 		
 		for(int i=3;i<=1000;i++) {
 			
 			try {
 				
-				newPoint = pointAddition(newPoint, P, a, b);
+				newPoint = pointAddition(newPoint, basePoint, a, b, mod);
 				
 				System.out.println(i+"P: "+displayPoint(newPoint));
 				
 			}
 			catch(Exception ex) {
 				
+				System.out.println("order of group: "+(i+1));
+				
 				break;
 				
 			}
 			
 		}
+		
 		*/
-
 		//-----------------------------------------------
+		/*
+		//key exchange
 		
 		Date generationBegin = new Date(); 
 		
 		System.out.println("public key generation...");
 		
 		BigInteger kAlice = new BigInteger("2010000000000017"); //alice's private key
-		FFPoint alicePublic = applyDoubleAndAddMethod(P, kAlice, a, b);
+		Point alicePublic = applyDoubleAndAddMethod(basePoint, kAlice, a, b);
 		System.out.println("alice public: \t"+displayPoint(alicePublic));
 		
 		BigInteger kBob = new BigInteger("2010000000000061"); //bob's private key
-		FFPoint bobPublic = applyDoubleAndAddMethod(P, kBob, a, b);
+		Point bobPublic = applyDoubleAndAddMethod(basePoint, kBob, a, b);
 		System.out.println("bob public: \t"+displayPoint(bobPublic));
 		
 		Date generationEnd = new Date();
@@ -80,20 +84,92 @@ public class EccOverFiniteField {
 		
 		System.out.println("key exchange...");
 		
-		FFPoint sefikShared = applyDoubleAndAddMethod(bobPublic, kAlice, a, b);
+		Point sefikShared = applyDoubleAndAddMethod(bobPublic, kAlice, a, b);
 		System.out.println("alice shared: \t"+displayPoint(sefikShared));
 		
-		FFPoint emerShared = applyDoubleAndAddMethod(alicePublic, kBob, a, b);
+		Point emerShared = applyDoubleAndAddMethod(alicePublic, kBob, a, b);
 		System.out.println("bob shared: \t"+displayPoint(emerShared));
 		
 		Date exchangeEnd = new Date(); 
 		
 		System.out.println("shared key exchange lasts "
 				+(double)(exchangeEnd.getTime() - exchangeBegin.getTime())/1000+" seconds\n");
+		*/
+		
+		//------------------------------------
+		
+		//ecdsa - elliptic curve digital signature algorithm
+		
+		String text = "ECC beats RSA";
+		
+		MessageDigest md = MessageDigest.getInstance("SHA1");
+		md.update(text.getBytes());
+		byte[] hashByte = md.digest();
+		
+		BigInteger hash = new BigInteger(hashByte);
+		
+		System.out.println("message: "+text);
+		System.out.println("hash: "+hash);
+		
+		//------------------------------------
+		
+		BigInteger privateKey = new BigInteger("151");
+		
+		Point publicKey = applyDoubleAndAddMethod(basePoint, privateKey, a, b, mod);
+		
+		System.out.println("public key: "+displayPoint(publicKey));
+		
+		
+		BigInteger randomKey = new BigInteger("115");
+		
+		Point randomPoint = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
+		
+		System.out.println("random point: "+displayPoint(randomPoint));
+		
+		//------------------------------------
+		
+		//signing
+		
+		BigInteger r = randomPoint.getPointX().remainder(order);
+				
+		BigInteger s = (hash.add(r.multiply(privateKey)).multiply(multiplicativeInverse(randomKey, order))).remainder(order);
+		
+		System.out.println("Signature: (r, s) = ("+r+", "+s+")");
+				
+		//------------------------------------
+		
+		//verification
+		
+		System.out.println("\nverification...");
+		
+		BigInteger w = multiplicativeInverse(s, order);
+		
+		Point u1 = applyDoubleAndAddMethod(basePoint, (hash.multiply(w).remainder(order)), a, b, mod);
+		
+		Point u2 = applyDoubleAndAddMethod(publicKey, (r.multiply(w).remainder(order)), a, b, mod);
+		
+		Point checkpoint = pointAddition(u1, u2, a, b, mod);
+		
+		System.out.println("checkpoint: "+displayPoint(checkpoint));
+		
+		System.out.println(checkpoint.getPointX()+" ?= "+r);
+		
+		if(checkpoint.getPointX().compareTo(r) == 0){
+			
+			System.out.println("signature is valid...");
+			
+		}
+		else{
+			
+			System.out.println("invalid signature detected!!!");
+			
+		}
+		
+		//------------------------------------
 		
 	}
 	
-	public static FFPoint pointAddition(FFPoint P, FFPoint Q, BigInteger a, BigInteger b) throws Exception {
+	public static Point pointAddition(Point P, Point Q, BigInteger a, BigInteger b, BigInteger mod) throws Exception {
 		
 		BigInteger x1 = P.getPointX();
 		BigInteger y1 = P.getPointY();
@@ -143,7 +219,7 @@ public class EccOverFiniteField {
 		x3 = x3.remainder(mod);
 		y3 = y3.remainder(mod);
 		
-		FFPoint R = new FFPoint();
+		Point R = new Point();
 		R.setPointX(x3);
 		R.setPointY(y3);
 						
@@ -151,9 +227,9 @@ public class EccOverFiniteField {
 		
 	}
 	
-	public static FFPoint applyDoubleAndAddMethod(FFPoint P, BigInteger k, BigInteger a, BigInteger b) throws Exception {
+	public static Point applyDoubleAndAddMethod(Point P, BigInteger k, BigInteger a, BigInteger b, BigInteger mod) throws Exception {
 		
-		FFPoint tempPoint = new FFPoint();
+		Point tempPoint = new Point();
 		tempPoint.setPointX(P.getPointX());
 		tempPoint.setPointY(P.getPointY());
 		
@@ -165,11 +241,11 @@ public class EccOverFiniteField {
 			
 			int currentBit = Integer.parseInt(kAsBinary.substring(i, i+1));
 			
-			tempPoint = pointAddition(tempPoint, tempPoint, a, b);
+			tempPoint = pointAddition(tempPoint, tempPoint, a, b, mod);
 			
 			if(currentBit == 1) {
 				
-				tempPoint = pointAddition(tempPoint, P, a, b);
+				tempPoint = pointAddition(tempPoint, P, a, b, mod);
 				
 			}
 			
@@ -223,6 +299,12 @@ public class EccOverFiniteField {
 			
 		}
 		
+		while(y2.compareTo(new BigInteger("0")) == -1){
+			
+			y2 = y2.add(mod);
+			
+		}
+		
 		return y2;	
 		
 	}
@@ -260,7 +342,7 @@ public class EccOverFiniteField {
 		
 	}
 	
-	public static String displayPoint(FFPoint P) {
+	public static String displayPoint(Point P) {
 		
 		return "("+P.getPointX()+", "+P.getPointY()+")";
 				
