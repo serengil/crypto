@@ -106,7 +106,7 @@ public class EccOverFiniteField  {
 		md.update(text.getBytes());
 		byte[] hashByte = md.digest();
 		
-		BigInteger hash = new BigInteger(hashByte);
+		BigInteger hash = new BigInteger(hashByte).abs();
 		
 		System.out.println("message: "+text);
 		System.out.println("hash: "+hash);
