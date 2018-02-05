@@ -16,6 +16,8 @@ public class EccOverFiniteField  {
 		
 		boolean enableBitcoinParams = true;
 		
+		Random rand = new Random();
+		
 		//inital elliptic curve configuration (public)
 		
 		BigInteger mod;
@@ -161,7 +163,8 @@ public class EccOverFiniteField  {
 		
 		
 		//BigInteger randomKey = new BigInteger("115");
-		BigInteger randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		//BigInteger randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		BigInteger randomKey = new BigInteger(128, rand);
 		
 		Point randomPoint = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
 		
@@ -248,7 +251,7 @@ public class EccOverFiniteField  {
 		
 		//randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
 		
-		Random rand = new Random();
+		
 		randomKey = new BigInteger(128, rand);
 		
 		Date encryptionBegin = new Date();
