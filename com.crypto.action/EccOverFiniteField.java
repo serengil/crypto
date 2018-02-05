@@ -230,12 +230,19 @@ public class EccOverFiniteField  {
 		Random rand = new Random();
 		randomKey = new BigInteger(128, rand);
 		
+		Date encryptionBegin = new Date();
+		
 		Point c1 = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
 		
 		Point c2 = applyDoubleAndAddMethod(publicKey, randomKey, a, b, mod);
 		c2 = pointAddition(c2, message, a, b, mod);
+		
+		Date encryptionEnd = new Date();
 	
 		System.out.println("ciphertext: ["+displayPoint(c1)+"\n, "+displayPoint(c2)+"]\n");
+		
+		System.out.println("encryption lasts "
+				+(double)(encryptionEnd.getTime() - encryptionBegin.getTime())/1000+" seconds\n");
 		
 		//decryption
 		
@@ -245,6 +252,8 @@ public class EccOverFiniteField  {
 		//decryption = c2 - secretKey x c1
 		//decryption = randomKey x (secretKey x P) + m - secretKey x (randomKey x P) = m
 		
+		Date decryptionBegin = new Date();
+		
 		Point d = applyDoubleAndAddMethod(c1, secretKey, a, b, mod);
 		Point dInv = new Point();
 		dInv.setPointX(d.getPointX());
@@ -252,7 +261,12 @@ public class EccOverFiniteField  {
 		
 		Point decryption = pointAddition(c2, dInv, a, b, mod);
 		
+		Date decryptionEnd = new Date();
+		
 		System.out.println("decrypted message: "+displayPoint(decryption));
+		
+		System.out.println("\ndecryption lasts "
+				+(double)(decryptionEnd.getTime() - decryptionBegin.getTime())/1000+" seconds\n");
 		
 	}
 	
