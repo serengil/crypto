@@ -34,14 +34,18 @@ public class EccOverFiniteField  {
 		
 		//-----------------------------------------------
 		/*
-		System.out.println("P: "+displayPoint(basePoint));
-		
 		//brute force
+		
+		System.out.println("------------------------------");
+		System.out.println("brute force addition");
+		System.out.println("------------------------------");
+		
+		System.out.println("P: "+displayPoint(basePoint));
 		
 		Point newPoint = pointAddition(basePoint, basePoint, a, b, mod);
 		System.out.println("2P: "+displayPoint(newPoint));
 		
-		for(int i=3;i<=1000;i++) {
+		for(int i=3;i<=20;i++) {
 			
 			try {
 				
@@ -60,10 +64,15 @@ public class EccOverFiniteField  {
 			
 		}
 		
+		System.out.println();
 		*/
 		//-----------------------------------------------
 		
 		//key exchange
+		
+		System.out.println("------------------------------------------");
+		System.out.println("Elliptic Curve Diffie Hellman Key Exchange");
+		System.out.println("------------------------------------------");
 		
 		Date generationBegin = new Date(); 
 		
@@ -101,8 +110,12 @@ public class EccOverFiniteField  {
 		
 		
 		//------------------------------------
-		/*
+		
 		//ecdsa - elliptic curve digital signature algorithm
+		
+		System.out.println("---------------------------------------------------");
+		System.out.println("Elliptic Curve Digital Signature Algorithm - ECDSA");
+		System.out.println("---------------------------------------------------");
 		
 		String text = "ECC beats RSA";
 		
@@ -136,17 +149,28 @@ public class EccOverFiniteField  {
 		
 		//signing
 		
+		System.out.println("\nsigning...");
+		
+		Date signingBegin = new Date();
+		
 		BigInteger r = randomPoint.getPointX().remainder(order);
 				
 		BigInteger s = (hash.add(r.multiply(privateKey)).multiply(multiplicativeInverse(randomKey, order))).remainder(order);
 		
 		System.out.println("Signature: (r, s) = ("+r+", "+s+")");
+		
+		Date signingEnd = new Date();
+		
+		System.out.println("\nmessage signing lasts "
+				+(double)(signingEnd.getTime() - signingBegin.getTime())/1000+" seconds\n");
 				
 		//------------------------------------
 		
 		//verification
 		
-		System.out.println("\nverification...");
+		Date verifyBegin = new Date();
+		
+		System.out.println("verification...");
 		
 		BigInteger w = multiplicativeInverse(s, order);
 		
@@ -170,7 +194,12 @@ public class EccOverFiniteField  {
 			System.out.println("invalid signature detected!!!");
 			
 		}
-		*/
+		
+		Date verifyEnd = new Date();
+		
+		System.out.println("\nverification lasts "
+				+(double)(verifyEnd.getTime() - verifyBegin.getTime())/1000+" seconds\n");
+		
 		//------------------------------------
 		
 	}
