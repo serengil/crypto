@@ -5,13 +5,16 @@ If you set the dump parameter true in the applyExtendedEuclidean and multiplySca
 
 The code could be applied for key exchanging (aka Elliptic Curve Diffie Hellman)
 
-=====
+
 Usage
 =====
 
 Run files under the com.crypto.action
 
-=======
+com.crypto.action.EccOverFiniteField.java works on finite fields. In other words, key exchanging will be produced on integers. Run this file. 
+
+com.crypto.action.EccOverRealNumbers.java is a legacy, and it handles key exchange on real numbers.
+
 License
 =======
 
