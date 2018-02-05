@@ -14,13 +14,25 @@ public class EccOverFiniteField  {
 	
 	public static void main(String[] args) throws Exception {
 		
+		boolean enableBitcoinParams = true;
+		
 		//inital elliptic curve configuration (public)
 		
-		//BigInteger mod = new BigInteger("199"); // F199
-		//BigInteger order = new BigInteger("211"); //point of the finite field - order of group
+		BigInteger mod;
+		BigInteger order;
 		
-		BigInteger mod = generatePrimeModulo();
-		BigInteger order = new BigInteger("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16); 
+		if(enableBitcoinParams){
+			
+			mod = generatePrimeModulo();
+			order = new BigInteger("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16); 
+			
+		}
+		else{
+			
+			mod = new BigInteger("199"); // F199
+			order = new BigInteger("211"); //point of the finite field - order of group
+			
+		}
 		
 		//curve equation: y^2 = x^3 + ax + b -> current curve: y^2 = x^3 + 7
 		BigInteger a = new BigInteger("0");
@@ -28,10 +40,19 @@ public class EccOverFiniteField  {
 		
 		//base point on the curve
 		Point basePoint = new Point();
-		//basePoint.setPointX(BigInteger.valueOf(2));
-		//basePoint.setPointY(BigInteger.valueOf(24));
-		basePoint.setPointX(new BigInteger("55066263022277343669578718895168534326250603453777594175500187360389116729240"));
-		basePoint.setPointY(new BigInteger("32670510020758816978083085130507043184471273380659243275938904335757337482424"));
+		
+		if(enableBitcoinParams){
+			
+			basePoint.setPointX(new BigInteger("55066263022277343669578718895168534326250603453777594175500187360389116729240"));
+			basePoint.setPointY(new BigInteger("32670510020758816978083085130507043184471273380659243275938904335757337482424"));
+			
+		}
+		else{
+			
+			basePoint.setPointX(BigInteger.valueOf(2));
+			basePoint.setPointY(BigInteger.valueOf(24));
+			
+		}
 		
 		//-----------------------------------------------
 		/*
@@ -414,8 +435,8 @@ public class EccOverFiniteField  {
 		
 		//Secp256k1
 		//Recommended 256-bit Elliptic Curve Domain Parameters over Fp (http://www.secg.org/sec2-v2.pdf)
+		//modulo for bitcoin
 		//2^256 - 2^32 - 2^9 - 2^8 - 2^7 - 2^6 - 2^4 - 2^0
-		
 		
 		BigInteger base = new BigInteger("2");
 		
@@ -428,17 +449,6 @@ public class EccOverFiniteField  {
 		.subtract(base.pow(4))
 		.subtract(base.pow(0));
 		
-		//----------------------------------
-		/*
-		//alternative: P-256 prime
-		// 2^256 - 2^224 + 2^192 + 2^96 - 1 
-		
-		BigInteger modulus =  base.pow(256)
-		.subtract(base.pow(224))
-		.add(base.pow(192))
-		.add(base.pow(96))
-		.subtract(base.pow(0));
-		*/
 		return modulus;
 		
 	}
