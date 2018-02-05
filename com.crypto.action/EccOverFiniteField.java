@@ -6,6 +6,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.security.MessageDigest;
 import java.util.Date;
+import java.util.Random;
 
 import com.crypto.entity.Point;
 
@@ -224,7 +225,11 @@ public class EccOverFiniteField  {
 		
 		//encryption
 		
-		randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		//randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		
+		Random rand = new Random();
+		randomKey = new BigInteger(128, rand);
+		
 		Point c1 = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
 		
 		Point c2 = applyDoubleAndAddMethod(publicKey, randomKey, a, b, mod);
