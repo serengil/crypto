@@ -62,7 +62,7 @@ public class EccOverFiniteField  {
 		
 		*/
 		//-----------------------------------------------
-		/*
+		
 		//key exchange
 		
 		Date generationBegin = new Date(); 
@@ -70,11 +70,11 @@ public class EccOverFiniteField  {
 		System.out.println("public key generation...");
 		
 		BigInteger kAlice = new BigInteger("2010000000000017"); //alice's private key
-		Point alicePublic = applyDoubleAndAddMethod(basePoint, kAlice, a, b);
+		Point alicePublic = applyDoubleAndAddMethod(basePoint, kAlice, a, b, mod);
 		System.out.println("alice public: \t"+displayPoint(alicePublic));
 		
 		BigInteger kBob = new BigInteger("2010000000000061"); //bob's private key
-		Point bobPublic = applyDoubleAndAddMethod(basePoint, kBob, a, b);
+		Point bobPublic = applyDoubleAndAddMethod(basePoint, kBob, a, b, mod);
 		System.out.println("bob public: \t"+displayPoint(bobPublic));
 		
 		Date generationEnd = new Date();
@@ -88,20 +88,20 @@ public class EccOverFiniteField  {
 		
 		System.out.println("key exchange...");
 		
-		Point sefikShared = applyDoubleAndAddMethod(bobPublic, kAlice, a, b);
-		System.out.println("alice shared: \t"+displayPoint(sefikShared));
+		Point aliceShared = applyDoubleAndAddMethod(bobPublic, kAlice, a, b, mod);
+		System.out.println("alice shared: \t"+displayPoint(aliceShared));
 		
-		Point emerShared = applyDoubleAndAddMethod(alicePublic, kBob, a, b);
-		System.out.println("bob shared: \t"+displayPoint(emerShared));
+		Point bobShared = applyDoubleAndAddMethod(alicePublic, kBob, a, b, mod);
+		System.out.println("bob shared: \t"+displayPoint(bobShared));
 		
 		Date exchangeEnd = new Date(); 
 		
 		System.out.println("shared key exchange lasts "
 				+(double)(exchangeEnd.getTime() - exchangeBegin.getTime())/1000+" seconds\n");
-		*/
+		
 		
 		//------------------------------------
-		
+		/*
 		//ecdsa - elliptic curve digital signature algorithm
 		
 		String text = "ECC beats RSA";
@@ -170,7 +170,7 @@ public class EccOverFiniteField  {
 			System.out.println("invalid signature detected!!!");
 			
 		}
-		
+		*/
 		//------------------------------------
 		
 	}
