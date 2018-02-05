@@ -45,7 +45,7 @@ public class EccOverFiniteField  {
 		Point newPoint = pointAddition(basePoint, basePoint, a, b, mod);
 		System.out.println("2P: "+displayPoint(newPoint));
 		
-		for(int i=3;i<=20;i++) {
+		for(int i=3;i<=1000;i++) {
 			
 			try {
 				
@@ -201,6 +201,53 @@ public class EccOverFiniteField  {
 				+(double)(verifyEnd.getTime() - verifyBegin.getTime())/1000+" seconds\n");
 		
 		//------------------------------------
+		
+		//elliptic curve elgamal
+		
+		System.out.println("-------------------------------------------");
+		System.out.println("Elliptic Curve ElGamal Symmetric Encryption");
+		System.out.println("-------------------------------------------");
+		
+		//text to point is another issue
+		//suppose that you would like to encrypt the following point on the curve
+		
+		Point message = new Point();
+		message.setPointX(new BigInteger("33614996735103061868086131503312627786077049888376966084542785773152043381677"));
+		message.setPointY(new BigInteger("84557594361191031609962062080128931200952163654712344162477769532776951195137"));
+		
+		System.out.println("plaintext: "+displayPoint(message)+"\n");
+		
+		//alice and bob both know this secret key
+		BigInteger secretKey = new BigInteger("75263518707598184987916378021939673586055614731957507592904438851787542395619");
+		
+		publicKey = applyDoubleAndAddMethod(basePoint, secretKey, a, b, mod);
+		
+		//encryption
+		
+		randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		Point c1 = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
+		
+		Point c2 = applyDoubleAndAddMethod(publicKey, randomKey, a, b, mod);
+		c2 = pointAddition(c2, message, a, b, mod);
+	
+		System.out.println("ciphertext: ["+displayPoint(c1)+"\n, "+displayPoint(c2)+"]\n");
+		
+		//decryption
+		
+		//c2 = randomKey x publicKey + m = randomKey x (secretKey x P) + m
+		//c1 = randomKey x P
+		
+		//decryption = c2 - secretKey x c1
+		//decryption = randomKey x (secretKey x P) + m - secretKey x (randomKey x P) = m
+		
+		Point d = applyDoubleAndAddMethod(c1, secretKey, a, b, mod);
+		Point dInv = new Point();
+		dInv.setPointX(d.getPointX());
+		dInv.setPointY(d.getPointY().multiply(new BigInteger("-1"))); //curve is symmetric about x-axis
+		
+		Point decryption = pointAddition(c2, dInv, a, b, mod);
+		
+		System.out.println("decrypted message: "+displayPoint(decryption));
 		
 	}
 	
