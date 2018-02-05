@@ -8,7 +8,9 @@ Course link: https://www.udemy.com/elliptic-curve-cryptography-masterclass/?coup
 
 This project implements the following approaches; double and add method (a.k.a. binary method), Elliptic curve point addition, Elliptic curve point doubling, Extended euclidean algorithm to find multiplicative inverse rapidly.
 
-The code could be applied for both key exchanging (aka Elliptic Curve Diffie Hellman) and digital signatures (aka Elliptic Curve Digital Signature Algorithm).
+The code could be applied for both key exchanging (aka Elliptic Curve Diffie Hellman) and digital signatures (aka Elliptic Curve Digital Signature Algorithm - ECDSA).
+
+BTW, Bitcoin uses ECDSA to sign and verify bitcoin transactions. This code uses bitcoin protocol's configurations directly.
 
 
 Usage
