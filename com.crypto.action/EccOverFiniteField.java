@@ -239,7 +239,7 @@ public class EccOverFiniteField  {
 		
 		Date encryptionEnd = new Date();
 	
-		System.out.println("ciphertext: ["+displayPoint(c1)+"\n, "+displayPoint(c2)+"]\n");
+		System.out.println("ciphertext:[\n"+displayPoint(c1)+"\n, "+displayPoint(c2)+"\n]");
 		
 		System.out.println("encryption lasts "
 				+(double)(encryptionEnd.getTime() - encryptionBegin.getTime())/1000+" seconds\n");
