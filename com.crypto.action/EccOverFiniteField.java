@@ -57,7 +57,7 @@ public class EccOverFiniteField  {
 		}
 		
 		//-----------------------------------------------
-		/*
+		
 		//brute force
 		
 		System.out.println("------------------------------");
@@ -69,7 +69,7 @@ public class EccOverFiniteField  {
 		Point newPoint = pointAddition(basePoint, basePoint, a, b, mod);
 		System.out.println("2P: "+displayPoint(newPoint));
 		
-		for(int i=3;i<=1000;i++) {
+		for(int i=3;i<=20;i++) {
 			
 			try {
 				
@@ -89,7 +89,7 @@ public class EccOverFiniteField  {
 		}
 		
 		System.out.println();
-		*/
+		
 		//-----------------------------------------------
 		
 		//key exchange
@@ -227,70 +227,51 @@ public class EccOverFiniteField  {
 		
 		//------------------------------------
 		
-		//elliptic curve elgamal
+		//symmetric key encryption / decryption
 		
-		System.out.println("-------------------------------------------");
-		System.out.println("Elliptic Curve ElGamal Symmetric Encryption");
-		System.out.println("-------------------------------------------");
+		System.out.println("-----------------------------------");
+		System.out.println("Elliptic Curve ElGamal Cryptosystem");
+		System.out.println("-----------------------------------");
 		
-		//text to point is another issue
-		//suppose that you would like to encrypt the following point on the curve
+		Point plaintext = new Point();
+		plaintext.setPointX(new BigInteger("33614996735103061868086131503312627786077049888376966084542785773152043381677"));
+		plaintext.setPointY(new BigInteger("84557594361191031609962062080128931200952163654712344162477769532776951195137"));
 		
-		Point message = new Point();
-		message.setPointX(new BigInteger("33614996735103061868086131503312627786077049888376966084542785773152043381677"));
-		message.setPointY(new BigInteger("84557594361191031609962062080128931200952163654712344162477769532776951195137"));
+		System.out.println("plaintext: "+displayPoint(plaintext));
 		
-		System.out.println("plaintext: "+displayPoint(message)+"\n");
-		
-		//alice and bob both know this secret key
 		BigInteger secretKey = new BigInteger("75263518707598184987916378021939673586055614731957507592904438851787542395619");
+		//alice and bob both must know this secret key
 		
 		publicKey = applyDoubleAndAddMethod(basePoint, secretKey, a, b, mod);
 		
-		//encryption
+		//encryption 
 		
-		//randomKey = new BigInteger("28695618543805844332113829720373285210420739438570883203839696518176414791234");
+		rand = new Random();
 		
-		
-		randomKey = new BigInteger(128, rand);
-		
-		Date encryptionBegin = new Date();
+		randomKey = new BigInteger(128, rand); //2^128 - 1
 		
 		Point c1 = applyDoubleAndAddMethod(basePoint, randomKey, a, b, mod);
 		
 		Point c2 = applyDoubleAndAddMethod(publicKey, randomKey, a, b, mod);
-		c2 = pointAddition(c2, message, a, b, mod);
+		c2 = pointAddition(c2, plaintext, a, b, mod);
 		
-		Date encryptionEnd = new Date();
-	
-		System.out.println("ciphertext:\nc1: "+displayPoint(c1)+"\nc2: "+displayPoint(c2)+"\n");
-		
-		System.out.println("encryption lasts "
-				+(double)(encryptionEnd.getTime() - encryptionBegin.getTime())/1000+" seconds\n");
+		System.out.println("\nciphertext:");
+		System.out.println("c1: "+displayPoint(c1));
+		System.out.println("c2: "+displayPoint(c2));
 		
 		//decryption
 		
-		//c2 = randomKey x publicKey + m = randomKey x (secretKey x P) + m
-		//c1 = randomKey x P
-		
-		//decryption = c2 - secretKey x c1
-		//decryption = randomKey x (secretKey x P) + m - secretKey x (randomKey x P) = m
-		
-		Date decryptionBegin = new Date();
+		//message = c2 - secretKey * c1
 		
 		Point d = applyDoubleAndAddMethod(c1, secretKey, a, b, mod);
+		
 		Point dInv = new Point();
 		dInv.setPointX(d.getPointX());
-		dInv.setPointY(d.getPointY().multiply(new BigInteger("-1"))); //curve is symmetric about x-axis
+		dInv.setPointY(d.getPointY().multiply(new BigInteger("-1")));
 		
 		Point decryption = pointAddition(c2, dInv, a, b, mod);
+		System.out.println("\ndecrypted messsage: "+displayPoint(decryption));
 		
-		Date decryptionEnd = new Date();
-		
-		System.out.println("decrypted message: "+displayPoint(decryption));
-		
-		System.out.println("\ndecryption lasts "
-				+(double)(decryptionEnd.getTime() - decryptionBegin.getTime())/1000+" seconds\n");
 		
 	}
 	
