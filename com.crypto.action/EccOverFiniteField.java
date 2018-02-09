@@ -80,7 +80,7 @@ public class EccOverFiniteField  {
 			}
 			catch(Exception ex) {
 				
-				System.out.println("order of group: "+(i+1));
+				System.out.println("order of group: "+(i));
 				
 				break;
 				
