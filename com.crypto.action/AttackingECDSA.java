@@ -26,6 +26,9 @@ public class AttackingECDSA {
 		Signature:
 		r = 108450790312736419148091503336190989867379581793003243037811027177541631669413
 		s = 93018423342979723123475596426177746328319084281547536693403927266445225542337
+		
+		Suppose that attacker knows that both of these signatures are signed with same random key value
+		
 		*/
 		
 		//--------------------------------------------
@@ -36,20 +39,30 @@ public class AttackingECDSA {
 		
 		//--------------------------------------------
 		
+		//hash value of the 1st message
 		BigInteger h1 = new BigInteger("320026739459778556085970613903841025917693204146");
+		
+		//hash value of the 2nd message
 		BigInteger h2 = new BigInteger("440277347181637471621630043227578594221535759787");
 		
 		//--------------------------------------------
 		
+		//r values are same for both signature
 		BigInteger r = new BigInteger("108450790312736419148091503336190989867379581793003243037811027177541631669413");
 		
+		//s value of 1st message
 		BigInteger s1 = new BigInteger("42607929338608516553334258379858331648786092653262293992803886156552661298302");
+		
+		//s value of 2nd message
 		BigInteger s2 = new BigInteger("93018423342979723123475596426177746328319084281547536693403927266445225542337");
 		
 		//--------------------------------------------
 		
-		//attack
+		//attack time
 		/*
+		
+		Remember the following formula
+		
 		r1 = x coordinate of (randomKey x P) mod order
 		s1 = randomKeyInv * (h1 + privateKey * r1)
 		
