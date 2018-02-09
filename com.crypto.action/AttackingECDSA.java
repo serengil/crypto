@@ -83,7 +83,7 @@ public class AttackingECDSA {
 		//--------------------------------------------
 		
 		//if attacker has randomKey, then he can extract private key from the following equation
-		//s1 = randomKeyInv * (h1 - privateKey * r) mod order
+		//s1 = randomKeyInv * (h1 + privateKey * r) mod order
 		
 		BigInteger privateKey = s1.multiply(randomKey).subtract(h1).multiply(EccOverFiniteField.multiplicativeInverse(r, order));
 		
