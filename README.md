@@ -22,6 +22,8 @@ com.crypto.action.EccOverFiniteField.java is the current file and it works on fi
 
 com.crypto.action.EccOverRealNumbers.java is a legacy file, and it handles key exchange on real numbers. You should run it only if you wonder how ECC formulas work theoretically.
 
+Alternatively, you should run the file under python folder if you feel more comfortable at python
+
 License
 =======
 
