@@ -1,3 +1,5 @@
+#The following code is tested on Python 3.5.2 (2018-02-15)
+
 enableBitcoinParams = True
 
 applyBruteForce = True
