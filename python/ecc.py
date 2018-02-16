@@ -32,6 +32,9 @@ else:
 	x0 = 2
 	y0 = 24
 
+print("Curve: y^2 = x^3 + ",a,"*x + ",b)
+print("Base point: (",x0,", ",y0,")")
+
 #------------------------------------
 
 def findModularInverse(a, mod):
