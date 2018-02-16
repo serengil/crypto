@@ -2,6 +2,8 @@
 
 enableBitcoinParams = True
 
+dump = False #enable this variable to trace extended euclidean algorithm table generation
+
 applyBruteForce = True
 applyKeyExchange = True
 applyDigitalSignature = True
