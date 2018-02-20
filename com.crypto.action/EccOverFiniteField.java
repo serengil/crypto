@@ -272,6 +272,82 @@ public class EccOverFiniteField  {
 		Point decryption = pointAddition(c2, dInv, a, b, mod);
 		System.out.println("\ndecrypted messsage: "+displayPoint(decryption));
 		
+		//-------------------------------------------------
+		
+		//baby step giant step approach
+		//to find the order of group - points on the curve
+		//complexity of this method is sqrt(sqrt(mod))
+		
+		Point Q = applyDoubleAndAddMethod(basePoint, mod.add(BigInteger.valueOf(1)), a, b, mod);
+		System.out.println("Q: "+displayPoint(Q));
+		
+		BigInteger m = sqrt(sqrt(mod)).add(BigInteger.valueOf(1));
+		System.out.println("sqrt("+order+") = "+m);
+		
+		boolean terminate = false;
+		
+		for(BigInteger j = BigInteger.valueOf(1); j.compareTo(m) < 1; j=j.add(BigInteger.valueOf(1))){
+			
+			Point jP = applyDoubleAndAddMethod(basePoint, j, a, b, mod);
+			
+			//System.out.println(displayPoint(jP));
+			
+			for(BigInteger k = m.multiply(BigInteger.valueOf(-1)); k.compareTo(m) < 1; k=k.add(BigInteger.valueOf(1))){
+				
+				Point checkpoint = applyDoubleAndAddMethod(basePoint, m.multiply(BigInteger.valueOf(2).multiply(k)), a, b, mod);
+				checkpoint = pointAddition(checkpoint, Q, a, b, mod);
+				
+				//System.out.println("\t"+displayPoint(checkpoint));
+				
+				if(checkpoint.getPointX().compareTo(jP.getPointX()) == 0){
+					
+					System.out.println(displayPoint(jP)+" == "+displayPoint(checkpoint));
+					System.out.println("order of group should be: "+mod.add(BigInteger.valueOf(1)).add(m.multiply(BigInteger.valueOf(2).multiply(k)))+"±"+j);
+					
+					BigInteger r = mod.add(BigInteger.valueOf(1)).add(m.multiply(BigInteger.valueOf(2).multiply(k)));
+					
+					//-------------------
+					
+					try{
+						//r1 + j
+						Point tmp = applyDoubleAndAddMethod(basePoint,r.add(j), a, b, mod);
+						
+						try{
+							
+							tmp = applyDoubleAndAddMethod(basePoint,r.subtract(j), a, b, mod);
+													
+						}
+						catch(Exception exx){
+							
+							System.out.println("order of group: "+r.subtract(j));
+							
+							terminate = true;
+							
+							break;
+							
+						}
+												
+					}
+					catch(Exception exx){
+						
+						System.out.println("order of group: "+r.add(j));
+						
+						terminate = true;
+						
+						break;
+						
+					}
+					
+					//-------------------
+					
+				}
+				
+			}
+			
+			if(terminate == true)
+				break;
+			
+		}
 		
 	}
 	
