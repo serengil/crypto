@@ -278,6 +278,10 @@ public class EccOverFiniteField  {
 		//to find the order of group - points on the curve
 		//complexity of this method is sqrt(sqrt(mod))
 		
+		System.out.println("\n-------------------------------------------------");
+		System.out.println("Counting point on a finite field - order of group");
+		System.out.println("--------------------------------------------------");
+		
 		Point Q = applyDoubleAndAddMethod(basePoint, mod.add(BigInteger.valueOf(1)), a, b, mod);
 		System.out.println("Q: "+displayPoint(Q));
 		
@@ -294,43 +298,43 @@ public class EccOverFiniteField  {
 			
 			for(BigInteger k = m.multiply(BigInteger.valueOf(-1)); k.compareTo(m) < 1; k=k.add(BigInteger.valueOf(1))){
 				
-				Point checkpoint = applyDoubleAndAddMethod(basePoint, m.multiply(BigInteger.valueOf(2).multiply(k)), a, b, mod);
-				checkpoint = pointAddition(checkpoint, Q, a, b, mod);
+				Point cp = applyDoubleAndAddMethod(basePoint, m.multiply(BigInteger.valueOf(2).multiply(k)), a, b, mod);
+				cp = pointAddition(cp, Q, a, b, mod);
 				
 				//System.out.println("\t"+displayPoint(checkpoint));
 				
-				if(checkpoint.getPointX().compareTo(jP.getPointX()) == 0){
+				if(cp.getPointX().compareTo(jP.getPointX()) == 0){
 					
-					System.out.println(displayPoint(jP)+" == "+displayPoint(checkpoint));
+					System.out.println(displayPoint(jP)+" == "+displayPoint(cp));
 					System.out.println("order of group should be: "+mod.add(BigInteger.valueOf(1)).add(m.multiply(BigInteger.valueOf(2).multiply(k)))+"±"+j);
 					
-					BigInteger r = mod.add(BigInteger.valueOf(1)).add(m.multiply(BigInteger.valueOf(2).multiply(k)));
+					BigInteger orderOfGroup = mod.add(BigInteger.valueOf(1)).add(m.multiply(BigInteger.valueOf(2).multiply(k)));
 					
-					//-------------------
-					
+					//+j
 					try{
-						//r1 + j
-						Point tmp = applyDoubleAndAddMethod(basePoint,r.add(j), a, b, mod);
 						
-						try{
-							
-							tmp = applyDoubleAndAddMethod(basePoint,r.subtract(j), a, b, mod);
-													
-						}
-						catch(Exception exx){
-							
-							System.out.println("order of group: "+r.subtract(j));
-							
-							terminate = true;
-							
-							break;
-							
-						}
+						applyDoubleAndAddMethod(basePoint,orderOfGroup.add(j), a, b, mod);
 												
 					}
 					catch(Exception exx){
 						
-						System.out.println("order of group: "+r.add(j));
+						System.out.println("order of group: "+orderOfGroup.add(j));
+						
+						terminate = true;
+						
+						break;
+						
+					}
+					
+					//-j
+					try{
+						
+						applyDoubleAndAddMethod(basePoint,orderOfGroup.subtract(j), a, b, mod);
+												
+					}
+					catch(Exception exx){
+						
+						System.out.println("order of group: "+orderOfGroup.subtract(j));
 						
 						terminate = true;
 						
@@ -515,6 +519,24 @@ public class EccOverFiniteField  {
 		
 		return "("+P.getPointX()+", "+P.getPointY()+")";
 				
+	}
+	
+	public static BigInteger sqrt(BigInteger n) {
+		
+		BigInteger a = BigInteger.ONE;
+		BigInteger b = new BigInteger(n.shiftRight(5).add(new BigInteger("8")).toString());
+		
+		while(b.compareTo(a) >= 0) {
+			
+			BigInteger mid = new BigInteger(a.add(b).shiftRight(1).toString());
+			
+			if(mid.multiply(mid).compareTo(n) > 0) b = mid.subtract(BigInteger.ONE);
+			
+			else a = mid.add(BigInteger.ONE);
+			
+		}
+		
+		return a.subtract(BigInteger.ONE);
 	}
 
 	
