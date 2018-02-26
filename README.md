@@ -18,11 +18,11 @@ Usage
 
 Run files under the com.crypto.action
 
-com.crypto.action.EccOverFiniteField.java is the current file and it works on finite fields. In other words, key exchanging will be produced on integers. Run this file please.
+com.crypto.action.EccOverFiniteField.java is the current file and it works on finite fields. In other words, key exchanging and other stuff will be handled on integers. Run this file please. com.crypto.action.EccOverRealNumbers.java is a legacy file, and it handles key exchange on real numbers. You should run it only if you wonder how ECC formulas work theoretically.
 
-com.crypto.action.EccOverRealNumbers.java is a legacy file, and it handles key exchange on real numbers. You should run it only if you wonder how ECC formulas work theoretically.
+Alternatively, you should run the file python/ecc.py folder if you feel more comfortable at python (3.X)
 
-Alternatively, you should run the file under python folder if you feel more comfortable at python
+Additionally, bitcoin based codes are pulled in same directories.
 
 License
 =======
