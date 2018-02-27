@@ -274,7 +274,7 @@ public class EccOverFiniteField  {
 		
 		//-------------------------------------------------
 		
-		//baby step giant step approach
+		//baby step giant step approach - https://joeylitalien.github.io/assets/elliptic-curves.pdf
 		//to find the order of group - points on the curve
 		//complexity of this method is sqrt(sqrt(mod))
 		
