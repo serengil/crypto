@@ -8,6 +8,7 @@ applyBruteForce = True
 applyKeyExchange = True
 applyDigitalSignature = True
 applySymmetricEncryption = True
+applyOrderOfGroup = False
 
 #------------------------------------
 #curve configuration
@@ -279,3 +280,53 @@ if applySymmetricEncryption == True:
 	print("decrypted: ",decrypted,"")
 	
 #------------------------------------
+
+if applyOrderOfGroup == True:
+	
+	from math import sqrt
+	
+	Q = applyDoubleAndAddMethod(x0, y0, mod + 1, a, b, mod)
+	print("(mod + 1)P = ", mod + 1,"P = ",Q)
+	
+	m = int(sqrt(sqrt(mod))) + 1
+	print("1 + (mod^1/4) = 1 + (",mod,")^1/4 = ",m)
+	print()
+	
+	terminate = False
+	
+	for j in range (1, m+1):
+		
+		jP = applyDoubleAndAddMethod(x0, y0, j, a, b, mod)
+		print(j,"P = ",jP, " -> ", end="")
+		
+		for k in range (-m, m+1):
+			
+			checkpoint = applyDoubleAndAddMethod(x0, y0, m*2*k, a, b, mod)
+			checkpoint = pointAddition(checkpoint[0], checkpoint[1], Q[0], Q[1], a, b, mod)
+			
+			print(checkpoint," ", end="")
+			
+			if checkpoint[0] == jP[0]: #check x-corrdinates of checkpoint and jP
+				
+				orderOfGroup = mod + 1 + m*2*k
+				
+				print("\norder of group should be ", orderOfGroup ," ± ", j)
+				
+				try:
+					applyDoubleAndAddMethod(x0, y0, orderOfGroup + j, a, b, mod)
+				except:
+					orderOfGroup = orderOfGroup + j
+					terminate = True
+					break
+				try:
+					applyDoubleAndAddMethod(x0, y0, orderOfGroup - j, a, b, mod)
+				except:
+					orderOfGroup = orderOfGroup - j
+					terminate = True
+					break
+		
+		print()
+		if terminate == True:
+			break
+	
+	print("order of group: ", orderOfGroup)
