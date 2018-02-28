@@ -363,7 +363,7 @@ if applyECDLP == True:
 			#if iP[0] == checkpoint[0] and iP[1] == checkpoint[1]:
 			if iP == checkpoint:
 				
-				print(i+j*m," mod ",order)
+				print("private key is ", i+j*m," mod ",order)
 				print("ECDLP solved in", i+m,"th step")
 				terminate = True
 				break
