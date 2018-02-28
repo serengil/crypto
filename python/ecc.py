@@ -360,7 +360,8 @@ if applyECDLP == True:
 			checkpoint = pointAddition(publicKey[0], publicKey[1], checkpoint[0], -checkpoint[1], a, b, mod)
 			#print(checkpoint, " ",end ="")
 			
-			if iP[0] == checkpoint[0] and iP[1] == checkpoint[1]:
+			#if iP[0] == checkpoint[0] and iP[1] == checkpoint[1]:
+			if iP == checkpoint:
 				
 				print(i+j*m," mod ",order)
 				print("ECDLP solved in", i+m,"th step")
