@@ -9,6 +9,7 @@ applyKeyExchange = True
 applyDigitalSignature = True
 applySymmetricEncryption = True
 applyOrderOfGroup = False
+applyECDLP = False
 
 #------------------------------------
 #curve configuration
@@ -330,3 +331,41 @@ if applyOrderOfGroup == True:
 			break
 	
 	print("order of group: ", orderOfGroup)
+
+#-----------------------------------
+
+if applyECDLP == True:
+	
+	from math import sqrt
+	
+	k = 177
+	publicKey = applyDoubleAndAddMethod(x0, y0, k, a, b, mod)
+	print("public key: ", publicKey)
+
+	print("Find k such that ",publicKey," = k x (",x0,", ",y0,")")
+
+	terminate = False
+	step = 0
+	
+	#------------------------
+	
+	m = int(sqrt(order)) + 1
+	
+	for i in range(1, m):
+		iP = applyDoubleAndAddMethod(x0, y0, i, a, b, mod)
+		#print("look for", iP," in the following series ")
+		
+		for j in range(1, m):
+			checkpoint = applyDoubleAndAddMethod(x0, y0, j*m, a, b, mod)
+			checkpoint = pointAddition(publicKey[0], publicKey[1], checkpoint[0], -checkpoint[1], a, b, mod)
+			#print(checkpoint, " ",end ="")
+			
+			if iP[0] == checkpoint[0] and iP[1] == checkpoint[1]:
+				
+				print(i+j*m," mod ",order)
+				print("ECDLP solved in", i+m,"th step")
+				terminate = True
+				break
+		
+		if terminate == True:
+			break
