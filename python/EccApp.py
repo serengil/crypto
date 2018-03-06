@@ -7,7 +7,7 @@ applySymmetricEncryption = True
 applyOrderOfGroup = True
 applyECDLP = False
 
-enableBitcoinParams = False
+enableBitcoinParams = True
 
 #------------------------------------
 #curve configuration
