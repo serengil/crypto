@@ -4,7 +4,7 @@ applyBruteForce = True
 applyKeyExchange = True
 applyDigitalSignature = True
 applySymmetricEncryption = True
-applyOrderOfGroup = True
+applyOrderOfGroup = False
 applyECDLP = False
 
 enableBitcoinParams = True
