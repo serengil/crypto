@@ -2,6 +2,8 @@ import random
 from Crypto.Random import get_random_bytes
 from Crypto.PublicKey import ElGamal
 
+import cryptocommons as commons
+
 print("-----------------------")
 print("key generation")
 print("-----------------------")
@@ -40,38 +42,6 @@ print("decryption")
 restored = c2 * pow(c1, (p-1-x), p) % p
 print("restored message: ",restored)
 
-
-#------------------------------
-def gcd(a, b):
-	if a%b == 0:
-		return b
-	else:
-		return gcd(b, a%b)
-
-def modInverse(number, mod):
-	x1 = 1; x2 = 0; x3 = mod
-	y1 = 0; y2 = 1; y3 = number
-	
-	q = int(x3 / y3)
-	
-	t1 = x1 - q * y1
-	t2 = x2 - q * y2
-	t3 = x3 - q * y3
-	
-	while y3 != 1:
-		x1 = y1;x2 = y2;x3= y3
-		y1 = t1;y2 = t2; y3 = t3
-		
-		q = int(x3 / y3)
-		t1 = x1 - q * y1
-		t2 = x2 - q * y2
-		t3 = x3 - q * y3
-		
-	if y2 < 0:
-		while y2 < 0:
-			y2 = y2 + mod
-	
-	return y2
 #------------------------------
 #digital signatures
 
@@ -85,13 +55,13 @@ hash = 100
 
 k = random.randint(1,p-1)
 
-while gcd(p-1, k) != 1:
+while commons.gcd(p-1, k) != 1:
 	k = random.randint(1,p-1)
 	
 #print("random key: ",k)
 
 r = pow(g, k, p)
-s = (hash - x*r) * modInverse(k, p-1) % (p-1)
+s = (hash - x*r) * commons.modInverse(k, p-1) % (p-1)
 
 print("signature: (r=",r,", s=",s,")")
 
