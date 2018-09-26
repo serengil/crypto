@@ -8,6 +8,8 @@ https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-
 
 https://www.udemy.com/public-key-cryptography-from-scratch-in-python/?couponCode=PCC-101-BLOG-1804
 
+** 90% OFF over the regular price **
+
 Usage
 =====
 
