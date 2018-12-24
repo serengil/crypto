@@ -19,17 +19,20 @@ def gcd(a, b):
     return b
 
 def findModInverse(a, m): #modular inverse of a mod m
-
-    if gcd(a, m) != 1:
-        return None # no mod inverse if a & m aren't relatively prime
-
-    # Calculate using the Extended Euclidean Algorithm:
-    u1, u2, u3 = 1, 0, a
-    v1, v2, v3 = 0, 1, m
-    while v3 != 0:
-        q = u3 // v3 # // is the integer division operator
-        v1, v2, v3, u1, u2, u3 = (u1 - q * v1), (u2 - q * v2), (u3 - q * v3), v1, v2, v3
-    return u1 % m
+	
+	if a < 0:
+		a = (a + m * int(abs(a)/m) + m) % m
+	
+	if gcd(a, m) != 1:
+		return None # no mod inverse if a & m aren't relatively prime
+	
+	# Calculate using the Extended Euclidean Algorithm:
+	u1, u2, u3 = 1, 0, a
+	v1, v2, v3 = 0, 1, m
+	while v3 != 0:
+		q = u3 // v3 # // is the integer division operator
+		v1, v2, v3, u1, u2, u3 = (u1 - q * v1), (u2 - q * v2), (u3 - q * v3), v1, v2, v3
+	return u1 % m
 
 def applyDoubleAndAddMethod(P, k, a, d, mod):
 	
@@ -54,22 +57,14 @@ def pointAddition(P, Q, a, d, mod):
 	x1 = P[0]; y1 = P[1]
 	x2 = Q[0]; y2 = Q[1]
 	
-	denominator = (1+d*x1*x2*y1*y2) % mod
-	if denominator < 0:
-		denominator = (denominator + mod * int(abs(denominator)/mod) + mod) % mod
-	
 	x3 = (
 		((x1*y2 + y1*x2) % mod)
-		* findModInverse(denominator, mod)
+		* findModInverse(1+d*x1*x2*y1*y2, mod)
 	) % mod
-	
-	denominator = (1- d*x1*x2*y1*y2) % mod
-	if denominator < 0:
-		denominator = (denominator + mod * int(abs(denominator)/mod) + mod) % mod
 	
 	y3 = (
 		((y1*y2 - a*x1*x2) % mod)
-		*findModInverse(denominator, mod)
+		*findModInverse(1- d*x1*x2*y1*y2, mod)
 	) % mod
 	
 	return x3, y3
