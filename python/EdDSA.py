@@ -58,13 +58,11 @@ def pointAddition(P, Q, a, d, mod):
 	x2 = Q[0]; y2 = Q[1]
 	
 	x3 = (
-		((x1*y2 + y1*x2) % mod)
-		* findModInverse(1+d*x1*x2*y1*y2, mod)
+		((x1*y2 + y1*x2) % mod) * findModInverse(1+d*x1*x2*y1*y2, mod)
 	) % mod
 	
 	y3 = (
-		((y1*y2 - a*x1*x2) % mod)
-		*findModInverse(1- d*x1*x2*y1*y2, mod)
+		((y1*y2 - a*x1*x2) % mod) * findModInverse(1- d*x1*x2*y1*y2, mod)
 	) % mod
 	
 	return x3, y3
@@ -80,7 +78,7 @@ print("Key Generation: ")
 #privateKey = 47379675103498394144858916095175689779086087640336534911165206022228115974270 #32 byte secret key
 import random
 privateKey = random.getrandbits(256) #32 byte secret key
-print("private key: ",privateKey)
+#print("private key: ",privateKey)
 
 publicKey = applyDoubleAndAddMethod(base, privateKey, a, d, p)
 print("public key: ", publicKey)
