@@ -57,13 +57,8 @@ def pointAddition(P, Q, a, d, mod):
 	x1 = P[0]; y1 = P[1]
 	x2 = Q[0]; y2 = Q[1]
 	
-	x3 = (
-		((x1*y2 + y1*x2) % mod) * findModInverse(1+d*x1*x2*y1*y2, mod)
-	) % mod
-	
-	y3 = (
-		((y1*y2 - a*x1*x2) % mod) * findModInverse(1- d*x1*x2*y1*y2, mod)
-	) % mod
+	x3 = (((x1*y2 + y1*x2) % mod) * findModInverse(1+d*x1*x2*y1*y2, mod)) % mod
+	y3 = (((y1*y2 - a*x1*x2) % mod) * findModInverse(1- d*x1*x2*y1*y2, mod)) % mod
 	
 	return x3, y3
 	
