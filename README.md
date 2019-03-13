@@ -38,10 +38,4 @@ This repository also includes common public key techniques such as Diffie Hellma
 License
 =======
 
-Copyright 2016 Sefik Ilkin Serengil (https://sefiks.com/)
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+This repository is licensed under MIT license - see [LICENSE](https://github.com/serengil/crypto/blob/master/LICENSE) for more details
