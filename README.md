@@ -1,4 +1,4 @@
-# Elliptic Curve Cryptography Masterclass and Public Key Cryptography From Scratch In Python
+# Elliptic Curve Cryptography Masterclass and Public Key Cryptography From Scratch
 
 This repository covers codes for both Elliptic Curve Cryptography Masterclass and Public Key Cryptography From Scratch In Python online courses.
 
