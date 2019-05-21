@@ -20,19 +20,25 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 ## Elliptic Curve Cryptography Masterclass In Python
 
-1- **ECC with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
+1- **Elliptic Curve Cryptography with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
+
+This code covers key exchange, digital signature, symmetric encryption, order of group (number of points in finite field) and elliptic curve discrete logarithm problem. This is dependent to [EccCore.py](https://github.com/serengil/crypto/blob/master/python/EccCore.py).
 
 2- **Edwards Curve Digital Signature Algorithm** [`Code`](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
+Edwards curves offer faster calculations than regular elliptic curve forms.
+
 3- **Finding Bitcoin Address** [`Code`](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py), [`Tutorial`](https://sefiks.com/2018/03/26/a-step-by-step-bitcoin-address-example/), [`Configuration`](https://github.com/serengil/crypto/blob/master/configuration/bitcoin-configuration.txt)
+
+A bitcoin address consists of a public key.
 
 4- **Elliptic Curve ElGamal** [`Code`](https://github.com/serengil/crypto/blob/master/python/EC-ElGamal.py)
 
-
+Previously, we have implemented symmetric encryption but in that case we encrypt and decrypt a point on the curve. Now, we will transform a text message to a elliptic curve point and apply encryption. However, this is a de facto implementation because decryption requires to solve ECDLP.
 
 ## Elliptic Curve Cryptography Masterclass In Java
 
-1- **ECC with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
+1- **Elliptic Curve Cryptography with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
 
 
 
@@ -72,15 +78,15 @@ This modified type of Edwards Curve will be used in EdDSA.
 
 9- [**Elliptic Curve ElGamal Symmetric Encryption**](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/)
 
-This is a de facto implementation of symmetric encryption of ECC. We should encrypt / decrypt points on the curve but handling texts requires to solve ECDLP. That's why, we can just encrypt / decrypt "Hi" message.
-
 ### Advanced Topics in ECC
 
-10- [**Elliptic Curve Discrete Logarithm Problem**](https://sefiks.com/2018/02/28/attacking-elliptic-curve-discrete-logarithm-problem/)
+10- [**Elliptic Curve Discrete Logarithm Problem (ECDLP)**](https://sefiks.com/2018/02/28/attacking-elliptic-curve-discrete-logarithm-problem/)
+
+Finding public key from known private key and base point is easy whereas extracting private key from known public key and base point is almost impossible. Elliptic Curve Discrete Logarithm Problem describes why elliptic curve cryptography is powerful.
 
 11- [**Order of Group in Elliptic Curves**](https://sefiks.com/2018/02/27/counting-points-on-elliptic-curves-over-finite-field/)
 
-
+Elliptic curve digital signature algorithm requires the number of points on the elliptic curve in finite field. We will mention baby step giant step to find this faster.
 
 ## Historical Cryptography
 
