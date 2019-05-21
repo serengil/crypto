@@ -1,6 +1,6 @@
 # crypto
 
-This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of [Elliptic Curve Cryptography Masterclass](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801) and [Public Key Cryptography From Scratch In Python]() online courses published on Udemy.
+This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of [**Elliptic Curve Cryptography Masterclass**](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801) and [**Public Key Cryptography From Scratch In Python**](https://www.udemy.com/public-key-cryptography-from-scratch-in-python/?couponCode=PCC-101-BLOG-1804) online courses published on Udemy.
 
 
 
