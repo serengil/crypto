@@ -18,7 +18,7 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 
 
-## Elliptic Curve Cryptography Masterclass
+## Elliptic Curve Cryptography Masterclass In Python
 
 1- **ECC with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
 
@@ -28,7 +28,11 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 4- **Elliptic Curve ElGamal** [`Code`](https://github.com/serengil/crypto/blob/master/python/EC-ElGamal.py)
 
-5- **ECC with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
+
+
+## Elliptic Curve Cryptography Masterclass In Java
+
+1- **ECC with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
 
 
 
