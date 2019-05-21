@@ -28,9 +28,7 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 4- **Elliptic Curve ElGamal** [`Code`](https://github.com/serengil/crypto/blob/master/python/EC-ElGamal.py)
 
-5- **ECC with Java** [`Code`](https://github.com/serengil/crypto/tree/master/com.crypto.action)
-
-com.crypto.action.EccOverFiniteField.java is the up-to-date file and it works on finite fields. In other words, key exchanging and other stuff will be handled on integers. Run this file please. com.crypto.action.EccOverRealNumbers.java is a legacy file, and it handles key exchange on real numbers. You should run it only if you wonder how ECC formulas work theoretically.
+5- **ECC with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
 
 
 
