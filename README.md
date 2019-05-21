@@ -60,7 +60,7 @@ This modified type of Edwards Curve will be used in EdDSA.
 
 ### Elliptic Curve Arithmetic
 
-5- [Point Addition on Elliptic Curves](http://sefiks.com/2016/03/27/double-and-add-method/)
+5- [**Point Addition on Elliptic Curves**](http://sefiks.com/2016/03/27/double-and-add-method/)
 
 ### Implementations
 
