@@ -1,4 +1,4 @@
-# Crypto
+# crypto
 
 This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of [Elliptic Curve Cryptography Masterclass](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801) and [Public Key Cryptography From Scratch In Python]() online courses published on Udemy.
 
