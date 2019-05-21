@@ -22,7 +22,7 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 1- **ECC with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
 
-2- **Edwards Curve Digital Signature Algorithm** [Code](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
+2- **Edwards Curve Digital Signature Algorithm** [`Code`](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
 3- **Finding Bitcoin Address** [`Code`](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py), [`Tutorial`](https://sefiks.com/2018/03/26/a-step-by-step-bitcoin-address-example/)
 
