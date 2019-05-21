@@ -20,7 +20,7 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 ## Elliptic Curve Cryptography Masterclass
 
-1- **ECC with Python** [`Code`](Public Key Cryptography From Scratch)
+1- **ECC with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
 
 2- **Edwards Curve Digital Signature Algorithm** [Code](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
