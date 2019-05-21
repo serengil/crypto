@@ -74,7 +74,7 @@ This modified type of Edwards Curve will be used in EdDSA.
 
 This is a de facto implementation of symmetric encryption of ECC. We should encrypt / decrypt points on the curve but handling texts requires to solve ECDLP. That's why, we can just encrypt / decrypt "Hi" message.
 
-### Objectives
+### Advanced Topics in ECC
 
 10- [**Elliptic Curve Discrete Logarithm Problem**](https://sefiks.com/2018/02/28/attacking-elliptic-curve-discrete-logarithm-problem/)
 
