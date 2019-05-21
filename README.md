@@ -16,15 +16,15 @@ This repository covers codes for both [Elliptic Curve Cryptography Masterclass](
 
 # Elliptic Curve Cryptography Masterclass
 
-1- [ECC with Python](Public Key Cryptography From Scratch)
+1- ECC with Python [Code](Public Key Cryptography From Scratch)
 
 This covers Key Exchange, Digital Signature, Symmetric Encryption for points on the curve. Also, we will mention order of group (number of points on the curve) and Elliptic Curve Discrete Logarithm Problem (ECDLP)
 
-2- [Edwards Curve Digital Signature Algorithm](https://github.com/serengil/crypto/blob/master/python/EdDSA.py)
+2- Edwards Curve Digital Signature Algorithm [Code](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [Tutorial](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
-Elliptic curves in Edwards form offer faster implementations.
+Elliptic curves in [Edwards form](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/) offer faster implementations.
 
-3- [Finding Bitcoin Address](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py)
+3- Finding Bitcoin Address [Code](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py), [Tutorial](https://sefiks.com/2018/03/26/a-step-by-step-bitcoin-address-example/)
 
 4- [Elliptic Curve ElGamal](https://github.com/serengil/crypto/blob/master/python/EC-ElGamal.py)
 
