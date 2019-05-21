@@ -42,13 +42,21 @@ Elliptic Curve Cryptography is a complex topic. You should read and understand t
 
 ### The Math Behind Elliptic Curves
 
-1- [**Elliptic Curves in Weirstrass Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/): This is the most popular elliptic curve form. Bitcoin uses this type of elliptic curve.
+1- [**Elliptic Curves in Weirstrass Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/)
 
-2- [**Elliptic Curves in Koblitz Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/): Koblitz curves are popular in hardware implemantations of elliptic curves.
+This is the most popular elliptic curve form. Bitcoin uses this type of elliptic curve.
 
-3- [**Edwards Curves**](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/): Elliptic curves in Edwards form offer faster calculations when compared to curves in Weirstrass and Koblitz forms.
+2- [**Elliptic Curves in Koblitz Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/)
 
-4- [**Twisted Edwards Curves**](https://sefiks.com/2018/12/26/twisted-edwards-curves/): This modified type of Edwards Curve will be used in EdDSA.
+Koblitz curves are popular in hardware implemantations of elliptic curves.
+
+3- [**Edwards Curves**](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/)
+
+Elliptic curves in Edwards form offer faster calculations when compared to curves in Weirstrass and Koblitz forms.
+
+4- [**Twisted Edwards Curves**](https://sefiks.com/2018/12/26/twisted-edwards-curves/)
+
+This modified type of Edwards Curve will be used in EdDSA.
 
 ### Elliptic Curve Arithmetic
 
@@ -62,7 +70,9 @@ Elliptic Curve Cryptography is a complex topic. You should read and understand t
 
 8- [**Edwards Curve Digital Signature Algorithm (EdDSA)**](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
-9- [**Elliptic Curve ElGamal Symmetric Encryption**](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/): This is a de facto implementation of symmetric encryption of ECC. We should encrypt / decrypt points on the curve but handling texts requires to solve ECDLP. That's why, we can just encrypt / decrypt "Hi" message.
+9- [**Elliptic Curve ElGamal Symmetric Encryption**](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/)
+
+This is a de facto implementation of symmetric encryption of ECC. We should encrypt / decrypt points on the curve but handling texts requires to solve ECDLP. That's why, we can just encrypt / decrypt "Hi" message.
 
 ### Objectives
 
