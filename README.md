@@ -8,7 +8,7 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 1- **Diffie Hellman Key Exchange Algorithm** [`Code`](https://github.com/serengil/crypto/blob/master/python/diffiehellman.py)
 
-2- **RSA** for Encryption, Digital Signature, Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/rsa.py), [`Tutorial`](http://sefiks.com/2018/05/21/the-math-behind-rsa-algorithm/)
+2- **RSA** for Encryption, Digital Signature and Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/rsa.py), [`Tutorial`](http://sefiks.com/2018/05/21/the-math-behind-rsa-algorithm/)
 
 3- **El Gamal** for Encryption and Digital Signature [`Code`](https://github.com/serengil/crypto/blob/master/python/elgamal.py)
 
