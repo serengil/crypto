@@ -40,7 +40,7 @@ Previously, we have implemented symmetric encryption but in that case we encrypt
 
 1- **Elliptic Curve Cryptography with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
 
-
+This java project is dependent to [entity](https://github.com/serengil/crypto/tree/master/com.crypto.entity) objects.
 
 ## Tutorials for Elliptic Curve Cryptography
 
