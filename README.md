@@ -48,19 +48,19 @@ Elliptic Curve Cryptography is a complex topic. You should read and understand t
 
 ### The Math Behind Elliptic Curves
 
-1- [**Elliptic Curves in Weirstrass Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/)
+1- Elliptic Curves in Weirstrass Form [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/), [`Video`](https://youtu.be/iydGkrjJkSM)
 
 This is the most popular elliptic curve form. Bitcoin uses this type of elliptic curve.
 
-2- [**Elliptic Curves in Koblitz Form**](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/)
+2- Elliptic Curves in Koblitz Form [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/), [`Video`](https://youtu.be/g8ePU5U5oP8)
 
 Koblitz curves are popular in hardware implemantations of elliptic curves.
 
-3- [**Edwards Curves**](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/)
+3- Edwards Curves [`Tutorial`](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/), [`Video`](https://youtu.be/Yn1kD1rNmns)
 
 Elliptic curves in Edwards form offer faster calculations when compared to curves in Weirstrass and Koblitz forms.
 
-4- [**Twisted Edwards Curves**](https://sefiks.com/2018/12/26/twisted-edwards-curves/)
+4- Twisted Edwards Curves [`Tutorial`](https://sefiks.com/2018/12/26/twisted-edwards-curves/)
 
 This modified type of Edwards Curve will be used in EdDSA.
 
