@@ -20,13 +20,13 @@ This repository covers both fundamentals of public key cryptography algorithms, 
 
 ## Elliptic Curve Cryptography Masterclass In Python
 
-1- **Elliptic Curve Cryptography with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py)
+1- **Elliptic Curve Cryptography with Python** [`Code`](https://github.com/serengil/crypto/blob/master/python/EccApp.py), [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/), [`Video`](https://youtu.be/iydGkrjJkSM)
 
 This code covers key exchange, digital signature, symmetric encryption, order of group (number of points in finite field) and elliptic curve discrete logarithm problem. This is dependent to [EccCore.py](https://github.com/serengil/crypto/blob/master/python/EccCore.py).
 
 2- **Edwards Curve Digital Signature Algorithm** [`Code`](https://github.com/serengil/crypto/blob/master/python/EdDSA.py), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
 
-Edwards curves offer faster calculations than regular elliptic curve forms.
+[Edwards curves](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/) offer faster calculations than regular elliptic curve forms.
 
 3- **Finding Bitcoin Address** [`Code`](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py), [`Tutorial`](https://sefiks.com/2018/03/26/a-step-by-step-bitcoin-address-example/), [`Configuration`](https://github.com/serengil/crypto/blob/master/configuration/bitcoin-configuration.txt)
 
@@ -41,52 +41,6 @@ Previously, we have implemented symmetric encryption but in that case we encrypt
 1- **Elliptic Curve Cryptography with Java** [`Up-to-date Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverFiniteField.java), [`Legacy Code`](https://github.com/serengil/crypto/blob/master/com.crypto.action/EccOverRealNumbers.java)
 
 This java project is dependent to [entity](https://github.com/serengil/crypto/tree/master/com.crypto.entity) objects.
-
-## Tutorials for Elliptic Curve Cryptography
-
-Elliptic Curve Cryptography is a complex topic. You should read and understand the following tutorials to understand the background of the cryptosystem.
-
-### The Math Behind Elliptic Curves
-
-1- **Elliptic Curves in Weirstrass Form** [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/), [`Video`](https://youtu.be/iydGkrjJkSM)
-
-This is the most popular elliptic curve form. Bitcoin uses this type of elliptic curve.
-
-2- **Elliptic Curves in Koblitz Form** [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/), [`Video`](https://youtu.be/g8ePU5U5oP8)
-
-Koblitz curves are popular in hardware implemantations of elliptic curves.
-
-3- **Edwards Curves** [`Tutorial`](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/), [`Video`](https://youtu.be/Yn1kD1rNmns)
-
-Elliptic curves in Edwards form offer faster calculations when compared to curves in Weirstrass and Koblitz forms.
-
-4- **Twisted Edwards Curves** [`Tutorial`](https://sefiks.com/2018/12/26/twisted-edwards-curves/)
-
-This modified type of Edwards Curve will be used in EdDSA.
-
-### Elliptic Curve Arithmetic
-
-5- **Point Addition on Elliptic Curves** [`Tutorial`](http://sefiks.com/2016/03/27/double-and-add-method/)
-
-### Implementations
-
-6- **Elliptic Curve Diffie Hellman Key Exchange** [`Tutorial`](https://sefiks.com/2016/04/11/key-exchange-from-carrying-handcuffed-briefcases-to-modern-cryptosystems/)
-
-7- **Elliptic Curve Digital Signature Algorithm (ECDSA)** [`Tutorial`](https://sefiks.com/2018/02/16/elegant-signatures-with-elliptic-curve-cryptography/)
-
-8- **Edwards Curve Digital Signature Algorithm (EdDSA)** [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/)
-
-9- **Elliptic Curve ElGamal Symmetric Encryption** [`Tutorial`](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/)
-
-### Advanced Topics in ECC
-
-10- **Elliptic Curve Discrete Logarithm Problem (ECDLP)** [`Tutorial`](https://sefiks.com/2018/02/28/attacking-elliptic-curve-discrete-logarithm-problem/)
-
-Finding public key from known private key and base point is easy whereas extracting private key from known public key and base point is almost impossible. Elliptic Curve Discrete Logarithm Problem describes why elliptic curve cryptography is powerful.
-
-11- **Order of Group in Elliptic Curves** [`Tutorial`](https://sefiks.com/2018/02/27/counting-points-on-elliptic-curves-over-finite-field/)
-
-Elliptic curve digital signature algorithm requires the number of points on the elliptic curve in finite field. We will mention baby step giant step to find this faster.
 
 ## Historical Cryptography
 
