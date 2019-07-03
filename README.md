@@ -48,7 +48,9 @@ This java project is dependent to [entity](https://github.com/serengil/crypto/tr
 
 Hill cipher is a strong historical method based on matrix multiplication.
 
+# Support
 
+There are many ways to support a project - starring the GitHub repos is one.
 
 # License
 
