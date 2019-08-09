@@ -1,6 +1,12 @@
 # crypto
 
-This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of [**Elliptic Curve Cryptography Masterclass**](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801) and [**Public Key Cryptography From Scratch In Python**](https://www.udemy.com/public-key-cryptography-from-scratch-in-python/?couponCode=PCC-101-BLOG-1804) online courses published on Udemy.
+This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of the following online courses
+
+[**Elliptic Curve Cryptography Masterclass**](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801)
+
+[**Public Key Cryptography From Scratch In Python**](https://www.udemy.com/public-key-cryptography-from-scratch-in-python/?couponCode=PCC-101-BLOG-1804) online courses published on Udemy.
+
+[**Cryptography Basics From Scratch In Python**](https://www.udemy.com/cryptography-basics-from-scratch-in-python/?couponCode=CRYPTO-BASICS-BLOG)
 
 
 
@@ -42,11 +48,25 @@ Previously, we have implemented symmetric encryption but in that case we encrypt
 
 This java project is dependent to [entity](https://github.com/serengil/crypto/tree/master/com.crypto.entity) objects.
 
-## Historical Cryptography
+## Cryptography Basics From Scratch In Python
 
-1- **Hill Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/hill.py), [`Tutorial`](https://sefiks.com/2018/12/04/a-step-by-step-hill-cipher-example/)
 
-Hill cipher is a strong historical method based on matrix multiplication.
+
+1- **Caesaar Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Caesar.ipynb)
+
+2- **Substitution Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Substitution.ipynb)
+
+3- **Affine Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Affine.ipynb)
+
+4- **Homophonic Substitution Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Homophonic.ipynb)
+
+5- **Permutation Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Permutation.ipynb)
+
+6- **Hill Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Hill.ipynb), [`Tutorial`](https://sefiks.com/2018/12/04/a-step-by-step-hill-cipher-example/)
+
+7- **Vigénere Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Vigenere.ipynb)
+
+8- **Kasiski Examination** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Kasiski.ipynb)
 
 # Support
 
