@@ -68,6 +68,8 @@ This java project is dependent to [entity](https://github.com/serengil/crypto/tr
 
 8- **Kasiski Examination** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Kasiski.ipynb)
 
+9- **Enigma Machine** [`Video`](https://youtu.be/XPd8LCxwrsc)
+
 # Support
 
 There are many ways to support a project - starring the GitHub repos is one.
