@@ -52,7 +52,7 @@ This java project is dependent to [entity](https://github.com/serengil/crypto/tr
 
 
 
-1- **Caesaar Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Caesar.ipynb)
+1- **Caesar Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Caesar.ipynb)
 
 2- **Substitution Cipher** [`Code`](https://github.com/serengil/crypto/blob/master/python/classical/Substitution.ipynb)
 
