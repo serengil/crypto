@@ -2,11 +2,11 @@
 
 This repository covers both fundamentals of public key cryptography algorithms, tutorials and implementations. I've created this repository during the capture of the following online courses published on Udemy.
 
-[**Elliptic Curve Cryptography Masterclass**](https://www.udemy.com/elliptic-curve-cryptography-masterclass/?couponCode=ECCMC-BLOG-201801)
+[**Elliptic Curve Cryptography Masterclass**](https://www.udemy.com/course/elliptic-curve-cryptography-masterclass/?referralCode=C5E74D486DD29F6DAF4A)
 
-[**Public Key Cryptography From Scratch In Python**](https://www.udemy.com/public-key-cryptography-from-scratch-in-python/?couponCode=PCC-101-BLOG-1804)
+[**Public Key Cryptography From Scratch In Python**](https://www.udemy.com/course/public-key-cryptography-from-scratch-in-python/?referralCode=8AF2BB504D810A4C99CB)
 
-[**Cryptography Basics From Scratch In Python**](https://www.udemy.com/cryptography-basics-from-scratch-in-python/?couponCode=CRYPTO-BASICS-BLOG)
+[**Cryptography Basics From Scratch In Python**](https://www.udemy.com/course/cryptography-basics-from-scratch-in-python/?referralCode=0B65C57251E2674FAC2C)
 
 
 
