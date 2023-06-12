@@ -4,7 +4,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 ## Elliptic Curve Cryptography
 
-1- Elliptic Curve Diffie-Hellman Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECDH.ipynb), [`Tutorial`](https://sefiks.com/2016/04/11/key-exchange-from-carrying-handcuffed-briefcases-to-modern-cryptosystems/), [`Video`](https://youtu.be/445Opx6U3Co)
+1- Elliptic Curve Diffie-Hellman Key Exchange (ECDH) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECDH.ipynb), [`Tutorial`](https://sefiks.com/2016/04/11/key-exchange-from-carrying-handcuffed-briefcases-to-modern-cryptosystems/), [`Video`](https://youtu.be/445Opx6U3Co)
 
 2- Elliptic Curve Digital Signature Algorithm (ECDSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECDSA.ipynb), [`Tutorial`](https://sefiks.com/2018/02/16/elegant-signatures-with-elliptic-curve-cryptography/), [`Video`](https://youtu.be/Br8o9KnyPJI)
 
