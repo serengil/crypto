@@ -54,7 +54,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 There are many ways to support a project - starring⭐ the GitHub repos is one.
 
-You can also enroll one of my courses published on Udemy to support: [`Elliptic Curve Cryptography Masterclass`](https://www.udemy.com/course/elliptic-curve-cryptography-masterclass/?referralCode=C5E74D486DD29F6DAF4A), [`Public Key Cryptography From Scratch In Python`](https://www.udemy.com/course/public-key-cryptography-from-scratch-in-python/?referralCode=8AF2BB504D810A4C99CB), [`Cryptography Basics From Scratch In Python`](https://www.udemy.com/course/cryptography-basics-from-scratch-in-python/?referralCode=0B65C57251E2674FAC2C)
+You can also enroll one of my courses published on Udemy to support: [`Public Key Cryptography From Scratch In Python`](https://www.udemy.com/course/public-key-cryptography-from-scratch-in-python/?referralCode=8AF2BB504D810A4C99CB), [`Cryptography Basics From Scratch In Python`](https://www.udemy.com/course/cryptography-basics-from-scratch-in-python/?referralCode=0B65C57251E2674FAC2C), [`Elliptic Curve Cryptography Masterclass In Java`](https://www.udemy.com/course/elliptic-curve-cryptography-masterclass/?referralCode=C5E74D486DD29F6DAF4A).
 
 You can support this work on [Patreon](https://www.patreon.com/serengil?repo=deepface) or [GitHub Sponsors](https://github.com/sponsors/serengil).
 
