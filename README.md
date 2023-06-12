@@ -56,9 +56,9 @@ There are many ways to support a project - starring⭐ the GitHub repos is one.
 
 You can also enroll one of my courses published on Udemy to support: [`Public Key Cryptography From Scratch In Python`](https://www.udemy.com/course/public-key-cryptography-from-scratch-in-python/?referralCode=8AF2BB504D810A4C99CB), [`Cryptography Basics From Scratch In Python`](https://www.udemy.com/course/cryptography-basics-from-scratch-in-python/?referralCode=0B65C57251E2674FAC2C), [`Elliptic Curve Cryptography Masterclass In Java`](https://www.udemy.com/course/elliptic-curve-cryptography-masterclass/?referralCode=C5E74D486DD29F6DAF4A).
 
-You can support this work on [Patreon](https://www.patreon.com/serengil?repo=deepface) or [GitHub Sponsors](https://github.com/sponsors/serengil).
+You can support this work on [Patreon](https://www.patreon.com/serengil?repo=crypto) or [GitHub Sponsors](https://github.com/sponsors/serengil).
 
-<a href="https://www.patreon.com/serengil?repo=deepface">
+<a href="https://www.patreon.com/serengil?repo=crypto">
 <img src="https://raw.githubusercontent.com/serengil/deepface/master/icon/patreon.png" width="30%" height="30%">
 </a>
 
