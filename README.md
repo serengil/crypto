@@ -2,6 +2,18 @@
 
 This repository covers cryptography algorithms, tutorials and python implementations.
 
+## Public Key Cryptography
+
+1- Diffie-Hellman Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/Diffie-Hellman.ipynb), [`Tutorial`](https://sefiks.com/2023/05/30/magic-of-diffie-hellman-from-a-programmers-perspective/), [`Video`](https://youtu.be/VzzCDO-o2Fc)
+
+2- Multiplicatively Homomorphic RSA [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/RSA.ipynb), [`Tutorial`](https://sefiks.com/2023/03/06/a-step-by-step-partially-homomorphic-encryption-example-with-rsa-in-python/), [`Video`](https://youtu.be/PzKch8UQAmQ)
+
+3- Multiplicatively or Additively Homomorphic ElGamal [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2023/03/27/a-step-by-step-partially-homomorphic-encryption-example-with-elgamal-in-python/), [`Video`](https://youtu.be/d-gK211N28U)
+
+4- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ)
+
+5- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
+
 ## Elliptic Curve Cryptography
 
 1- Elliptic Curve Diffie-Hellman Key Exchange (ECDH) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECDH.ipynb), [`Tutorial`](https://sefiks.com/2016/04/11/key-exchange-from-carrying-handcuffed-briefcases-to-modern-cryptosystems/), [`Video`](https://youtu.be/445Opx6U3Co)
@@ -17,18 +29,6 @@ This repository covers cryptography algorithms, tutorials and python implementat
 6- Elliptic Curve Menezes-Qu-Vanstone (ECMQV) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECMQV.ipynb), [`Tutorial`](https://sefiks.com/2023/05/29/elliptic-curve-menezes-qu-vanstone-in-python-from-scratch/), [`Video`](https://youtu.be/JKlTdY07IY4)
 
 7- Elliptic Curve Korean Certificate-based Digital Signature Algorithm (EC-KCDSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EC-KCDSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/09/elliptic-curve-kcdsa-in-python-from-scratch/), `Video`
-
-## Public Key Cryptography
-
-1- Diffie-Hellman Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/Diffie-Hellman.ipynb), [`Tutorial`](https://sefiks.com/2023/05/30/magic-of-diffie-hellman-from-a-programmers-perspective/), [`Video`](https://youtu.be/VzzCDO-o2Fc)
-
-2- Multiplicatively Homomorphic RSA [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/RSA.ipynb), [`Tutorial`](https://sefiks.com/2023/03/06/a-step-by-step-partially-homomorphic-encryption-example-with-rsa-in-python/), [`Video`](https://youtu.be/PzKch8UQAmQ)
-
-3- Multiplicatively or Additively Homomorphic ElGamal [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2023/03/27/a-step-by-step-partially-homomorphic-encryption-example-with-elgamal-in-python/), [`Video`](https://youtu.be/d-gK211N28U)
-
-4- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ)
-
-5- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
 ## Historical Cryptography
 
