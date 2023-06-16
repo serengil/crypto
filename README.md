@@ -28,7 +28,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 4- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ)
 
-5- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), `Tutorial`, `Video`
+5- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
 ## Historical Cryptography
 
