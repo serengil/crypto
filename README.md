@@ -1,5 +1,14 @@
 # crypto
 
+[![Stars](https://img.shields.io/github/stars/serengil/crypto?color=yellow&style=flat)](https://github.com/serengil/deepface/stargazers)
+[![License](http://img.shields.io/:license-MIT-green.svg?style=flat)](https://github.com/serengil/deepface/blob/master/LICENSE)
+[![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dserengil%26type%3Dpatrons&style=flat)](https://www.patreon.com/serengil?repo=crypto)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/serengil?logo=GitHub&color=lightgray)](https://github.com/sponsors/serengil)
+
+[![Blog](https://img.shields.io/:blog-sefiks.com-blue.svg?style=flat&logo=wordpress)](https://sefiks.com)
+[![YouTube](https://img.shields.io/:youtube-@sefiks-red.svg?style=flat&logo=youtube)](https://www.youtube.com/@sefiks?sub_confirmation=1)
+[![Twitter](https://img.shields.io/:follow-@serengil-blue.svg?style=flat&logo=twitter)](https://twitter.com/intent/user?screen_name=serengil)
+
 This repository covers cryptography algorithms, tutorials and python implementations.
 
 ## Public Key Cryptography
@@ -12,7 +21,17 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 4- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ)
 
-5- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
+5- Additively Homomorphic Okamoto–Uchiyama [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Okamoto%E2%80%93Uchiyama.ipynb), [`Tutorial`](https://sefiks.com/2023/10/20/a-step-by-step-partially-homomorphic-encryption-example-with-okamoto-uchiyama-in-python/)
+
+6- Additively Homomorphic Benaloh [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Benaloh.ipynb), [`Tutorial`](https://sefiks.com/2023/10/06/a-step-by-step-partially-homomorphic-encryption-example-with-benaloh-in-python-from-scratch/)
+
+7- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), `Tutorial`
+
+8- Additively Homomorphic Naccache–Stern `Code`, `Tutorial`
+
+9- Exclusively Homomorphic Goldwasser–Micali `Code`, `Tutorial`
+
+10- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
 ## Elliptic Curve Cryptography
 
