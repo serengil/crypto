@@ -27,7 +27,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 7- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), `Tutorial`, `Video`
 
-8- Additively Homomorphic Naccache–Stern `Code`, `Tutorial`, `Video`
+8- Additively Homomorphic Naccache–Stern [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Naccache%E2%80%93Stern.ipynb), [`Tutorial`](https://sefiks.com/2023/10/26/a-step-by-step-partially-homomorphic-encryption-example-with-naccache-stern-in-python/), `Video`
 
 9- Exclusively Homomorphic Goldwasser–Micali `Code`, `Tutorial`, `Video`
 
