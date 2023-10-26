@@ -33,7 +33,19 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 10- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
-## Elliptic Curve Cryptography
+## Elliptic Curve Cryptography Theory
+
+1- Elliptic Curves in Weierstrass Form [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curve-cryptography/), [`Video`](https://youtu.be/iydGkrjJkSM)
+
+2- Elliptic Curves in Koblitz Form [`Tutorial`](https://sefiks.com/2016/03/13/the-math-behind-elliptic-curves-over-binary-field/), [`Video`](https://youtu.be/g8ePU5U5oP8)
+
+3- Edwards Curves [`Tutorial`](https://sefiks.com/2018/12/19/a-gentle-introduction-to-edwards-curves/), [`Video`](https://youtu.be/Yn1kD1rNmns)
+
+4- Twisted Edwards Curves [`Tutorial`](https://sefiks.com/2018/12/26/twisted-edwards-curves/), `Video`
+
+5- Double and Add Method [`Tutorial`](https://sefiks.com/2016/03/27/double-and-add-method/), `Video`
+
+## Elliptic Curve Cryptography Implementations
 
 1- Elliptic Curve Diffie-Hellman Key Exchange (ECDH) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECDH.ipynb), [`Tutorial`](https://sefiks.com/2016/04/11/key-exchange-from-carrying-handcuffed-briefcases-to-modern-cryptosystems/), [`Video`](https://youtu.be/445Opx6U3Co)
 
@@ -48,6 +60,8 @@ This repository covers cryptography algorithms, tutorials and python implementat
 6- Elliptic Curve Menezes-Qu-Vanstone (ECMQV) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECMQV.ipynb), [`Tutorial`](https://sefiks.com/2023/05/29/elliptic-curve-menezes-qu-vanstone-in-python-from-scratch/), [`Video`](https://youtu.be/JKlTdY07IY4)
 
 7- Elliptic Curve Korean Certificate-based Digital Signature Algorithm (EC-KCDSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EC-KCDSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/09/elliptic-curve-kcdsa-in-python-from-scratch/), `Video`
+
+8- Bitcoin Address Generation [`Code`](https://github.com/serengil/crypto/blob/master/python/Bitcoin.py), [`Tutorial`](https://sefiks.com/2018/03/26/a-step-by-step-bitcoin-address-example/), [`Video`](https://youtu.be/3n93_yiWH0I)
 
 ## Historical Cryptography
 
