@@ -29,7 +29,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 8- Additively Homomorphic Naccache–Stern [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Naccache%E2%80%93Stern.ipynb), [`Tutorial`](https://sefiks.com/2023/10/26/a-step-by-step-partially-homomorphic-encryption-example-with-naccache-stern-in-python/), `Video`
 
-9- Exclusively Homomorphic Goldwasser–Micali `Code`, `Tutorial`, `Video`
+9- Exclusively Homomorphic Goldwasser–Micali [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Goldwasser%E2%80%93Micali.ipynb), [`Tutorial`](https://sefiks.com/2023/10/27/a-step-by-step-partially-homomorphic-encryption-example-with-goldwasser-micali-in-python/), `Video`
 
 10- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
