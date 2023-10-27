@@ -15,23 +15,28 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 1- Diffie-Hellman Key Exchange [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/Diffie-Hellman.ipynb), [`Tutorial`](https://sefiks.com/2023/05/30/magic-of-diffie-hellman-from-a-programmers-perspective/), [`Video`](https://youtu.be/VzzCDO-o2Fc)
 
-2- Multiplicatively Homomorphic RSA [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/RSA.ipynb), [`Tutorial`](https://sefiks.com/2023/03/06/a-step-by-step-partially-homomorphic-encryption-example-with-rsa-in-python/), [`Video`](https://youtu.be/PzKch8UQAmQ)
+2- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
-3- Multiplicatively or Additively Homomorphic ElGamal [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2023/03/27/a-step-by-step-partially-homomorphic-encryption-example-with-elgamal-in-python/), [`Video`](https://youtu.be/d-gK211N28U)
+## Homomorphic Encryption
 
-4- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ), [`Video`](https://youtu.be/Yerhc9B2zjQ)
+1- Multiplicatively Homomorphic RSA [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/RSA.ipynb), [`Tutorial`](https://sefiks.com/2023/03/06/a-step-by-step-partially-homomorphic-encryption-example-with-rsa-in-python/), [`Video`](https://youtu.be/PzKch8UQAmQ)
 
-5- Additively Homomorphic Okamoto–Uchiyama [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Okamoto%E2%80%93Uchiyama.ipynb), [`Tutorial`](https://sefiks.com/2023/10/20/a-step-by-step-partially-homomorphic-encryption-example-with-okamoto-uchiyama-in-python/), `Video`
+2- Multiplicatively or Additively Homomorphic ElGamal [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2023/03/27/a-step-by-step-partially-homomorphic-encryption-example-with-elgamal-in-python/), [`Video`](https://youtu.be/d-gK211N28U)
 
-6- Additively Homomorphic Benaloh [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Benaloh.ipynb), [`Tutorial`](https://sefiks.com/2023/10/06/a-step-by-step-partially-homomorphic-encryption-example-with-benaloh-in-python-from-scratch/), `Video`
+3- Additively Homomorphic Paillier [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Paillier.ipynb), [`Tutorial`](https://sefiks.com/2023/04/03/a-step-by-step-partially-homomorphic-encryption-example-with-paillier-in-python/), [`Video`](https://youtu.be/Yerhc9B2zjQ), [`Video`](https://youtu.be/Yerhc9B2zjQ)
 
-7- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), `Tutorial`, `Video`
+4- Additively Homomorphic Okamoto–Uchiyama [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Okamoto%E2%80%93Uchiyama.ipynb), [`Tutorial`](https://sefiks.com/2023/10/20/a-step-by-step-partially-homomorphic-encryption-example-with-okamoto-uchiyama-in-python/), `Video`
 
-8- Additively Homomorphic Naccache–Stern [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Naccache%E2%80%93Stern.ipynb), [`Tutorial`](https://sefiks.com/2023/10/26/a-step-by-step-partially-homomorphic-encryption-example-with-naccache-stern-in-python/), `Video`
+5- Additively Homomorphic Benaloh [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Benaloh.ipynb), [`Tutorial`](https://sefiks.com/2023/10/06/a-step-by-step-partially-homomorphic-encryption-example-with-benaloh-in-python-from-scratch/), `Video`
+
+6- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), `Tutorial`, `Video`
+
+7- Additively Homomorphic Naccache–Stern [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Naccache%E2%80%93Stern.ipynb), [`Tutorial`](https://sefiks.com/2023/10/26/a-step-by-step-partially-homomorphic-encryption-example-with-naccache-stern-in-python/), `Video`
+
+8- Additively Homomorphic Elliptic Curve ElGamal [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EC-ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/), [`Video`](https://youtu.be/062ilU5dOzY)
 
 9- Exclusively Homomorphic Goldwasser–Micali [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Goldwasser%E2%80%93Micali.ipynb), [`Tutorial`](https://sefiks.com/2023/10/27/a-step-by-step-partially-homomorphic-encryption-example-with-goldwasser-micali-in-python/), `Video`
 
-10- Digital Signature Algorithm (DSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/DSA.ipynb), [`Tutorial`](https://sefiks.com/2023/06/14/digital-signature-algorithm-dsa-in-python-from-scratch/), `Video`
 
 ## Elliptic Curve Cryptography Theory
 
@@ -53,7 +58,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 3- Edwards Curve Digital Signature Algorithn (EdDSA) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EdDSA.ipynb), [`Tutorial`](https://sefiks.com/2018/12/24/a-gentle-introduction-to-edwards-curve-digital-signature-algorithm-eddsa/), [`Video`](https://youtu.be/8TnRzFt3-K0)
 
-4- Elliptic Curve ElGamal Asymmetric Encryption (Additively Homomorphic) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EC-ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/), [`Video`](https://youtu.be/062ilU5dOzY)
+4- Elliptic Curve ElGamal Asymmetric Encryption [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/EC-ElGamal.ipynb), [`Tutorial`](https://sefiks.com/2018/08/21/elliptic-curve-elgamal-encryption/), [`Video`](https://youtu.be/062ilU5dOzY)
 
 5- Elliptic Curve Integrated Encryption Scheme (ECIES) [`Code`](https://github.com/serengil/crypto/blob/master/python/notebooks/ECIES.ipynb), [`Tutorial`](https://sefiks.com/2023/04/27/elliptic-curve-integrated-encryption-scheme-in-python/), [`Video`](https://youtu.be/0hTFoVOeJi0)
 
