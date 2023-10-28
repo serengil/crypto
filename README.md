@@ -29,7 +29,7 @@ This repository covers cryptography algorithms, tutorials and python implementat
 
 5- Additively Homomorphic Benaloh [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Benaloh.ipynb), [`Tutorial`](https://sefiks.com/2023/10/06/a-step-by-step-partially-homomorphic-encryption-example-with-benaloh-in-python-from-scratch/), `Video`
 
-6- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), `Tutorial`, `Video`
+6- Additively Homomorphic Damgard-Jurik [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Damgard-Jurik.ipynb), [`Tutorial`](https://sefiks.com/2023/10/20/a-step-by-step-partially-homomorphic-encryption-example-with-damgard-jurik-in-python/), `Video`
 
 7- Additively Homomorphic Naccache–Stern [`Code`](https://github.com/serengil/crypto/blob/master/python/homomorphic/Naccache%E2%80%93Stern.ipynb), [`Tutorial`](https://sefiks.com/2023/10/26/a-step-by-step-partially-homomorphic-encryption-example-with-naccache-stern-in-python/), `Video`
 
